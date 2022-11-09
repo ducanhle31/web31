@@ -5,9 +5,14 @@
   
 }
 .container{ margin: 0 auto;
-    padding: 100px;}
+    padding: 100px;
+    text-align: justify;
+    
+  }
   .size{ 
     font-size: 30px;
+    text-align: justify;
+    
   }
   .verticle-line {
     border-left: 3px solid #737373;
@@ -17,4 +22,6 @@ text-align: justify;
 }
 .stylee{ 
     list-style-type: decimal;
+    text-align: justify;
+    width: 800px;
 }
