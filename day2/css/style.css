@@ -1,0 +1,28 @@
+.heading {
+    color:rgb(255, 0, 0);
+    background-color: rgb(173, 233, 235);
+    text-align:unset;
+   
+    text-decoration: solid underline 5px rgb(255, 0, 0);
+    text-transform: lowercase;
+    line-height: 50px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3ps 5px;
+    
+}
+
+.heading:hover{
+  color: rgb(0, 0, 255);
+}
+.heading{
+    width: 500px;
+    height: 500px;
+    background-image: url(https://khoinguonsangtao.vn/wp-content/uploads/2022/05/anh-avatar-dep-ngau-hinh-dai-dien.jpg);
+}
+.container{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+    
+}
