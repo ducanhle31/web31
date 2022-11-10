@@ -1,0 +1,19 @@
+
+       
+            .heading{
+                margin-top:20px;
+            margin-bottom:20px;
+            margin-left:100px;
+            font-size: 30px;
+            width: 50%;
+            font-family: 'Times New Roman', Times, serif;
+
+            }
+  .center {
+         
+          width: 60%;
+          margin: left 100px; ;
+          padding: 50px;
+          font-size: 20px;
+          font-family: 'Times New Roman', Times, serif;
+      }

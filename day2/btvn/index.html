@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+     <style>
+img {
+   display: block;
+   margin-left: 100px;
+   margin-right: auto;
+   margin-top: 20px;
+}
+</style>
+</head>
+<body >
+    <h1 class="heading" >Quy tắc đặt tên class theo chuẩn BEM</h1>
+    <div class="center"><p>BEM là gì? <ol>BEM là viết tắt của Block-Element-Modifier, là một tiêu chuẩn quy ước đặt tên cho các tên lớp CSS. 
+BEM giúp cho việc code Frontend dễ đọc và dễ hiểu hơn, 
+dễ làm việc và dễ mở rộng cũng như bảo trì khi làm việc với CSS. Tên class BEM bao gồm 3 thành phần: block, element và modifier (có thể hiểu là: khối, phần tử và sửa đổi). 
+Trong bài này, tên các thành phần của BEM sẽ được giữ nguyên tên theo tiếng Anh cho dễ hình dung.</ol>
+<ul>Nếu cả ba được dùng chung thì tên class BEM sẽ như thế này: block__element--modifier
+    <ol>Block (Khối) Là thực thể độc lập có ý nghĩa riêng. Tuy các block có thể được lồng vào nhau và tương tác với nhau,
+ nhưng về mặt ngữ nghĩa các block vẫn bình đẳng, không có sự ưu tiên hoặc thứ bậc. vd header, container, menu, checkbox, input</ol>
+<ol> Element (Phần tử)
+ Là một phần của block và không có ý nghĩa độc lập, hay có thể coi element là phần tử con của block, 
+ element được gắn về mặt ngữ nghĩa với block của nó. vd menu item, list item, checkbox caption, header title</ol>
+ <ol> Modifier (Sửa đổi)
+ Là sửa đổi trên một block hoặc element, được dùng để thay đổi vẻ ngoài, hành vi hoặc trạng thái của block hay element đó.
+ disabled, highlighted, checked, fixed, size big, color yellow</ol>
+
+</ul>
+<ul>QUY TẮC ĐẶT TÊN
+   
+</ul>
+<ul>Quy tắc, cách sử dụng BEM đối với block, element, modifier
+BLOCK
+<ol>Tên block có thể bao gồm các chữ cái Latinh, chữ số và dấu gạch ngang.
+Tạo CSS class: thêm một tiền tố vào phía trước. VD: .block
+HTML</ol>
+<ol>Bất kỳ node (nút) DOM nào cũng có thể là một block nếu nó có một class name.
+
+Cách dùng trong CSS
+
+Chỉ sử dụng bộ chọn class
+Không dùng tên tag (thẻ) hoặc id
+Không phụ thuộc vào các block/element khác trên một trang
+VD:
+.block { color: #042; }</ol>
+
+</ul>
+<ul>ELEMENT
+Quy tắc đặt tên
+<ol>
+Tên element có thể bao gồm các chữ cái Latinh, chữ số, dấu gạch ngang và dấu gạch dưới. 
+Tạo class CSS: tên block cộng với hai dấu gạch dưới, cộng với tên element.
+VD: .block__elem
+HTML
+
+Bất kỳ node DOM nào trong một block đều có thể là một element.
+Trong một block nhất định, tất cả các element đều bằng nhau về mặt ngữ nghĩa.</ol>
+<ol>Cách dùng trong CSS
+
+Chỉ sử dụng bộ chọn class
+Không dùng tên tag (thẻ) hoặc id
+Không phụ thuộc vào các block/element khác trên một trang
+VD: 
+- Nên: 
+
+.block__elem { color: #042; }
+- Không nên: 
+
+.block .block__elem { color: #042; }
+
+div.block__elem { color: #042; }</ol>
+</ul>
+<ul>
+MODIFIER
+Quy tắc đặt tên
+<ol>Tên của modifier có thể bao gồm các chữ cái Latinh, chữ số, dấu gạch ngang và dấu gạch dưới. 
+Tạo class CSS: tên block hoặc element cộng với hai dấu gạch ngang, cộng với tên modifier.</ol>
+<ol>Tên của modifier có thể bao gồm các chữ cái Latinh, chữ số, dấu gạch ngang và dấu gạch dưới. 
+Tạo class CSS: tên block hoặc element cộng với hai dấu gạch ngang, cộng với tên modifier.
+Dấu cách trong các modifier dài (chứa 2 tiếng trở lên) được thay thế bằng dấu gạch ngang.</ol>
+<ol>VD: 
+.block--mod { }
+.block__elem--mod { }
+.block--color-black { }
+.block--color-red { }</ol>
+<ol>Modifier là tên class mà bạn thêm vào node DOM block/element. 
+Tăng thêm các modifier class vào các block/element mà chúng ta cần sửa đổi và giữ lại class ban đầu của block/element đó.
+VD:
+- Nên (thêm các class mới có chứa modifier, và giữ nguyên class cũ .block):
+
+- Không nên (thay thế class cũ):
+
+
+Cách dùng trong CSS
+
+Sử dụng modifier class làm bộ chọn CSS. VD:
+.block--hidden { }
+Thay đổi các element dựa trên block có chứa modifier. VD: 
+.block--mod .block__elem { }
+Element có modifier. VD:
+.block__elem--mod { }
+</ol>
+</ul>
+
+
+
+
+
+
+
+
+
+</p></div>
+    <h2 class="heading">Box model là gì? Các thuộc tính cơ bản của box model</h2>
+   <div class="center"><p>Box Model là một kỹ thuật cơ bản nhất trong CSS Layout và được sử dụng để bạn mô tả về khoảng cách mà mỗi phần 
+        tử trên website được sở hữu, 
+        hay nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị cho mỗi phần tử trên website.
+    Các thuộc tính cơ bản của box model
+Margin: Khoảng cách tính từ bên ngoài của phần tử.
+Border: Đường viền của phần tử.
+Padding: Khoảng cách tính từ bên trong của phần tử.
+Content: Nội dung trong phần tử.
+<img src="https://thachpham.com/wp-content/uploads/2015/04/box-model.gif" alt=" phần tử box model ">
+</p></div> 
+    <h3 class="heading">3 quy tắc chi phối cách thuộc tính CSS áp dụng cho phần tử: Cascade - Specificity - Inheritance là gì?</h3>
+   <div class="center"><p>Cascade
+Phân tầng biểu định kiểu - ở mức độ rất đơn giản, điều này có nghĩa là nguồn gốc, lớp phân tầng và thứ tự của các quy tắc CSS quan trọng. Khi hai quy tắc từ cùng một lớp thác áp dụng và cả hai đều có tính cụ thể như nhau, quy tắc được xác định cuối cùng trong biểu định kiểu là quy tắc sẽ được sử dụng.
+Specificity
+ Tính cụ thể là thuật toán mà trình duyệt sử dụng để quyết định giá trị thuộc tính nào được áp dụng cho một phần tử. Nếu nhiều khối kiểu có các bộ chọn khác nhau định cấu hình cùng một thuộc tính với các giá trị khác nhau và nhắm mục tiêu cùng một phần tử, thì tính cụ thể sẽ quyết định giá trị thuộc tính được áp dụng cho phần tử. Tính cụ thể về cơ bản là thước đo mức độ cụ thể của lựa chọn của một bộ chọn:
+
+Một bộ chọn phần tử ít cụ thể hơn; nó sẽ chọn tất cả các phần tử của loại đó xuất hiện trên một trang, vì vậy nó có ít trọng lượng hơn.
+Một bộ chọn lớp cụ thể hơn; nó sẽ chỉ chọn các phần tử trên trang có classgiá trị thuộc tính cụ thể, do đó, nó có trọng lượng hơn.
+Inheritance 
+Kế thừa cũng cần được hiểu trong ngữ cảnh này - một số giá trị thuộc tính CSS được đặt trên các phần tử mẹ được các phần tử con của chúng kế thừa và một số thì không.
+</p></div> 
+</body>
+</html>
