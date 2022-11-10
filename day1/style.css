@@ -1,17 +1,21 @@
 .heading {
    text-align: justify;
   width: 800px;
-    
-  
+    font-family: 'Times New Roman', Times, serif;
+   line-height: 20px;
 }
 .container{ margin: 0 auto;
     padding: 100px;
     text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+     line-height: 20px;
     
   }
   .size{ 
     font-size: 30px;
     text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+     line-height: 20px;
     
   }
   .verticle-line {
@@ -19,9 +23,13 @@
   height: 80px;
   width: 800px;
 text-align: justify;
+font-family: 'Times New Roman', Times, serif;
+ line-height: 20px;
 }
 .stylee{ 
     list-style-type: decimal;
     text-align: justify;
     width: 800px;
+    font-family: 'Times New Roman', Times, serif;
+     line-height: 20px;
 }
