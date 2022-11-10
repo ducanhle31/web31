@@ -19,8 +19,10 @@
     
   }
   .verticle-line {
-    border-left: 3px solid #737373;
-  height: 80px;
+    border-left: 4px solid #737373;
+  
+  height: auto;
+  
   width: 800px;
 text-align: justify;
 font-family: 'Times New Roman', Times, serif;
@@ -32,4 +34,13 @@ font-family: 'Times New Roman', Times, serif;
     width: 800px;
     font-family: 'Times New Roman', Times, serif;
      line-height: 20px;
+}
+.stile1{ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+   display: block;
+  width: 120px;
+  background-color: #dddddd
 }
