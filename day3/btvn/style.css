@@ -1,0 +1,19 @@
+.heading{
+    text-align: center; 
+   padding-left: 20%;
+    padding-right: 20%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.style{
+   text-align: left;
+font-size: 20px;
+
+}
+img{
+    max-width: 700px;
+    max-height: 400px;
+    
+    vertical-align: middle;
+    height: auto;
+    padding-left: 5%;
+}
