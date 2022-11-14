@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div > 
+        <div class="container" >
+           <h1 class="heading"> Giới thiệu Position</h1> 
+        <div class="style">Thuộc tính position chỉ định vị trí một phần tử HTML trên trình duyệt.
+
+Nó đi kèm với các thuộc tính top, right, bottom, left và z-index để chỉ định vị trí hiển thị của phần tử.
+
+Các giá trị có thể đặt cho thuộc tính position:
+<ul><img src="https://media.techmaster.vn/api/static/9479/YYDl5fcM" alt=""></ul>
+</div>
+<div class="style">Các thuộc tính top, right, bottom, left đặt vị trí hiển thị của phần tử theo theo hướng tương ứng
+   
+    <ul> <img src="https://media.techmaster.vn/api/static/9479/YYDl5fcM" alt=""></ul>
+</div>
+        </div>
+        <div class="container">
+            <h1 class="heading">Thuộc tính position trong CSS</h1>
+            <div class="style"><ul >Static <ol>Mọi phần tử khi được hiển thị trên trang web đều có giá trị mặc định position : static
+
+Với các phần tử có position: static, các thuộc tính top, right, bottom, left và z-index đều không có tác dụng.
+
+</ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/iE6UF9ac" alt=""></ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/QEXckJAh" alt=""></ol></ul>
+<ul>Relative <ol>Với giá trị position: relative, vị trí ban đầu của phần tử vẫn được giữ nguyên.
+
+Tuy nhiên chúng ta có thể áp dụng các thuộc tính top, right, bottom, left và z-index để chỉ định vị trí mới so với vị trí ban đầu.
+
+Vị trí hiển thị mới của phần tử sẽ dịch chuyển so với vị trí ban đầu tùy theo giá trị được chỉ định.
+
+</ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/_o_erh2s" alt=""></ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/x97O5x82" alt=""></ol>
+</ul>
+<ul> Absolute
+    <ol>Với giá trị position: absolute, sẽ dịch chuyển phần tử theo 1 phần tử khác
+
+Các thuộc tính top, right, bottom, left sẽ xác định vị trí của phần tử theo phần tử cha gần nhất có 
+position là một trong các giá trị: relative, absolute, 
+fixed, sticky hoặc theo khung nhìn của trình duyệt nếu không có phần tử cha nào có position hợp lệ.
+
+</ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/ex9vEqnh" alt=""></ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/Waop7QxJ" alt=""></ol>
+</ul>
+<ul>Fixed
+    <ol>Với giá trị position: fixed xác định vị trí cố định của phần tử.
+
+Các thuộc tính top, right, bottom, left đặt vị trí của phần tử cố định theo khung nhìn của trình trình duyệt,
+ và không bị ảnh hưởng khi cuộn trang.
+
+</ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/Zn1xmrVc" alt=""></ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/_yPDNCDA" alt=""></ol>
+</ul>
+<ul>sticky
+    <ol>Với position: sticky, vị trí và kích thước của phần tử được đặt bình thường trong luồng hiển thị, 
+        chỉ khi vị trí cuộn của khung nhìn trong ngưỡng chỉ định (dính với phần tử cha),
+         nó sẽ có vị trí cố định fixed được đặt bởi các thuộc tính top, right, bottom, left
+     
+        </ol>
+        <ol>   <img src="https://media.techmaster.vn/api/static/9479/iHtiM7ez" alt=""></ol>
+        <ol><img src="https://media.techmaster.vn/api/static/9479/OdtHcstx" alt=""></ol>
+</ul>
+<ul>Z-index
+    <ol>Các phần tử được định vị với position sẽ tạo một ngăn xếp (stack), các phần tử xếp chồng lên nhau.
+
+Thuộc tính z-index được sử dụng để chỉ định vị trí hiển thị của một phần tử trong ngăn xếp đó (stacking order), các phần tử có giá trị z-index cao được hiển thị bên trên các phần tử khác.
+
+💡 Các phần tử có chung phần tử cha tạo thành một nhóm ngăn xếp (stacking context), thuộc tính z-index chỉ áp dụng với các phần tử trong cùng nhóm đó.
+</ol>
+<ol><img src="https://media.techmaster.vn/api/static/9479/6KrX9j4d" alt=""></ol>
+</ul>
+                
+            </div>
+        </div>
+
+    </div>
+       
+</body>
+</html>

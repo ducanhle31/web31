@@ -1,0 +1,24 @@
+.flex-container{
+     /*  bởi vì flexbox là module. tự động đi kèm vs tất cả các thuộc tính khác*/
+    display: flex;
+/* quy định hướng sắp xesp các phần tử */
+    flex-direction: row;/* giá trị mặc định */
+    /*  */
+    justify-content: flex-start;
+    /* căn chỉnh các item theo mục cross( can chỉnh các mục trên dòng cua no) */
+    align-items: stretch;
+    /* cho phép các mục xuống dòng khi vượt quá kích thước container*/
+     flex-wrap: wrap;
+     /* căn chỉnh dòng trong container */
+    align-content: stretch;
+   /* đặt khoảng cách giữa các item */
+   gap: 20px;
+}
+.flex-item{
+    background-color: aqua ;
+ 
+    ;
+}
+.para{
+
+}
