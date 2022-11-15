@@ -1,0 +1,154 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+   font-family: Roboto,sans-serif;
+}
+
+
+
+.footer-distributed{
+  background:#30598c;
+ 
+  box-sizing: border-box;
+ width: 1519px;
+ height: 412px;
+  text-align: left;
+  font: bold 16px Roboto;
+  padding: 48px 114.5px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto,sans-serif;
+font-size:
+18px;
+font-weight:
+500;
+line-height:
+21.6px;
+
+display: flex;
+
+}
+
+.footer-distributed .footer-left
+{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+ 
+}
+
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px Roboto,sans-serif;
+  }
+
+  .footer-distributed .footer-left{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+.footer-company-name{
+    
+font-size:
+14px;
+   line-height: 21px;
+  
+    font-family: Roboto,sans-serif;
+}
+
+.heading{
+  font-size: 18px;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+   font-family: Roboto,sans-serif;
+}
+
+
+
+.footer-distributed{
+  background:#30598c;
+ 
+  box-sizing: border-box;
+ width: 1519px;
+ height: 412px;
+  text-align: left;
+  font: bold 16px Roboto;
+  padding: 48px 114.5px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto,sans-serif;
+font-size:
+18px;
+font-weight:
+500;
+line-height:
+21.6px;
+
+display: flex;
+
+}
+
+.footer-distributed .footer-left
+{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+ 
+}
+
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px Roboto,sans-serif;
+  }
+
+  .footer-distributed .footer-left{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+.footer-company-name{
+    
+font-size:
+14px;
+   line-height: 21px;
+  
+    font-family: Roboto,sans-serif;
+}
+
+.heading{
+  font-size: 18px;
+}

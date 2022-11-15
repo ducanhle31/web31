@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Danh sách khóa học </title>
+   <link rel="shortcut icon" type="image/jpg" href="data:image/jpeg;base64,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"/>
+    <script src="https://kit.fontawesome.com/ff3ced9eb9.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <div> <section class="list">  <link rel="stylesheet" href="style.css">
+         <div class="tech-card"> 
+            <a href="/day4/nháp 2/css/about.html">
+          <div class="container"> 
+        <div class="post">
+             <img src="https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/QyLctyB5" alt="">
+            </div>
+       <div class="post-1"> 
+        <div class="post-name">Lập trình di động đa nền tảng React Native cập nhật 2022</div> 
+<div class="post-2"><div> Onlab</div>
+    <div>4.5
+        <i class="fas fa-star" style="color:#ffd600"></i></div></div>
+        
+    </div>
+    
+    </div>
+
+    </a>
+    </div>
+     <div class="tech-card">
+         <a href="/day4/nháp 2/css/about.html">
+          <div class="container"> 
+        <div class="post"> <img src="https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/93NQ8U6F" alt=""></div>
+       <div class="post-1"> 
+        <div class="post-name"> DevOps 2022
+</div> 
+<div class="post-2"><div> Onlab</div>
+    <div>5
+        <i class="fas fa-star" style="color:#ffd600"></i></div></div>
+        
+    </div>
+    
+    </div>
+
+    </a>
+    </div>
+     <div class="tech-card"> 
+        <a href="/day4/nháp 2/css/about.html">
+          <div class="container"> 
+        <div class="post"> <img src="https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/bjxnxQi0" alt=""></div>
+       <div class="post-1"> 
+        <div class="post-name">Lập trình iOS Swift căn bản cập nhật 2022
+
+</div> 
+<div class="post-2"><div> Onlab</div>
+    <div>4.7
+        <i class="fas fa-star" style="color:#ffd600"></i></div></div>
+        
+    </div>
+    
+    </div>
+
+    </a>
+    </div>
+     <div class="tech-card">
+         <a href="/day4/nháp 2/css/about.html">
+          <div class="container"> 
+        <div class="post"> <img src="https://media.techmaster.vn/api/static/brbgh4451coepbqoch60/R6t2Z_Op" alt=""></div>
+       <div class="post-1"> 
+        <div class="post-name">Learn AWS The Hard Way
+</div> 
+<div class="post-2"><div> Onlab</div>
+    <div>5
+        <i class="fas fa-star" style="color:#ffd600"></i></div></div>
+        
+    </div>
+    
+    </div>
+
+    </a>
+    </div>
+     <div class="tech-card"> 
+        <a href="/day4/nháp 2/css/about.html">
+          <div class="container"> 
+        <div class="post"> <img src="https://media.techmaster.vn/api/static/6734/bsckujs51cob9t3q7mi0" alt=""></div>
+       <div class="post-1"> 
+        <div class="post-name">Khoá học Kubernetes căn bản qua các ví dụ
+</div> 
+<div class="post-2"><div> Onlab</div>
+    <div>5
+        <i class="fas fa-star" style="color:#ffd600"></i></div></div>
+        
+    </div>
+    
+    </div>
+
+    </a>
+    </div> 
+    <div class="tech-card"> 
+        <a href="/day4/nháp 2/css/about.html">
+          <div class="container"> 
+        <div class="post"> <img src="https://media.techmaster.vn/api/static/brbgh4451coepbqoch60/bu7baf451co41h2qctn0" alt=""></div>
+       <div class="post-1"> 
+        <div class="post-name">Python phân tích xử lý dữ liệu
+</div> 
+<div class="post-2"><div> Onlab</div>
+    <div>4.6
+        <i class="fas fa-star" style="color:#ffd600"></i></div></div>
+        
+    </div>
+    
+    </div>
+
+    </a>
+    </div>
+    </section></div>
+   
+   
+ <footer class="footer-distributed"> <link rel="stylesheet" href="main.css">
+
+      <div class="footer-left">
+
+        <p>CHỦ SỞ HỮU WEBSITE</p>
+        <div class="footer-company-name">
+            <p >
+          Công ty TNHH TechMaster Vietnam Ltd
+        </p>
+       <p>Số ĐKDN: 0105392153</p>
+                    <p>Ngày cấp: 4-7-2011</p>
+                    <p>Nơi cấp: Sở kế hoạch - đầu tư Hà nội</p>
+                    <p>Người đại diện pháp luật: Trịnh Minh Cường</p>
+        </div>
+
+        
+
+        
+      </div>
+
+      <div class="footer-left">
+
+        <p>GIỚI THIỆU</p>
+        <div class="footer-company-name">
+             <p>Học viện CNTT TechMaster</p>
+                    <p>Giảng viên</p>
+                    <p>Quy định</p>
+                    <p>Hướng dẫn mua khóa học</p>
+                    <p>Ưu đãi và hoàn trả học phí</p>
+                    <p>Bảo vệ thông tin khách hàng</p>
+        </div>
+
+        
+
+        
+      </div>
+      <div class="footer-left">
+
+        <p>TƯ VẤN TUYỂN SINH</p>
+        <div class="footer-company-name">
+              <p> Dương Đức Thịnh - 0987273764</p>
+                    <p>thinh@techmaster.vn</p>
+                    <p>Nguyễn Thanh Hương - 0382416368</p>
+                    <p> huong@techmaster.vn</p>
+                    <p>TƯ VẤN ĐÀO TẠO DOANH NGHIỆP</p>
+                    <p>0902209011 - cuong@techmaster.vn</p>
+        </div>
+
+        
+
+        
+      </div>
+      <div class="footer-left">
+
+        <p>ĐỊA CHỈ</p>
+        <div class="footer-company-name">
+              <p>Quận Hai Bà Trưng: 14 ngõ 4 Nguyễn Đình Chiểu</p>
+                    <p>Quận Nam Từ Liêm: tầng 12A, Viwaseen Tower, 48 Tố Hữu</p>
+                    <p>Quận Cầu Giấy: tầng 5, 13 Dịch Vọng Hậu</p>
+                    <p><i class="fab fa-facebook-square fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fab fa-youtube-square fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fab fa-github-square fa-2x"></i></p>
+        </div>
+
+        
+
+        
+      </div>
+    </footer>
+  
+
+  
+</body>
+</html>
