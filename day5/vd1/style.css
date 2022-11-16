@@ -1,0 +1,51 @@
+.box.static{
+  background-color: rgb(6, 67, 60);
+
+}
+.box.relative{background-color: aqua;
+    /* mặc ddingj tất cả giá trị khác static nằm trên layer cao hơn ,che phủ các phần tử static */
+    /* vc sử dụng  */
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+    
+}
+
+.box{width: 300px;
+    height: 300px;
+
+}
+.box.absolute{
+    background-color: blueviolet;
+    /* khi sử dụng thì các p, tử xung quanh bị ảnh hưởng khi mà o nằm trong bất
+     kỳ thẻ cha nào có position khác static thì căn theo khung nhìn  */
+   
+    /* căn theo phần tử cha gần nhaast có positin khác static */
+    /*  có thể áp dụng đồng thời  thuộc tính  */
+    position: relative;
+    top: 100px;
+    right: 100px;
+}
+.box.absolute.overlay{
+    /* ban đầu ẩn overlay */
+   display: none;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(90, 0, 0);
+}
+.box.relative:hover.box.absolute.overlay{
+
+    display: block;
+}
+.box.fixed{
+    background-color: rgb(25, 199, 18);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+   
+}
+/* sticky */
+/* cần có 1 container  có chiều cao cụ thể */
+/* cho phép 1 phần tử có giá trị ccuj thể trên trang */

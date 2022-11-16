@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    /* Tip css cho hình ảnh */
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav .container {
+    display: flex;
+}
+
+.nav-link,
+.dropdown-button {
+    display: block;
+    padding: 8px 16px;
+    background-color: rgb(71, 24, 61);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-dropdown:hover .dropdown-button {
+    background-color: rgb(93, 93, 255);
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+/* Highlight link/menu khi di chuột qua */
+
+.dropdown-item {
+    display: block;
+    padding: 10px 16px;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(93, 93, 255);
+}
