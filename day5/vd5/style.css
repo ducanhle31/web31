@@ -181,6 +181,7 @@ a {
   font-size: 1.3rem;
   color: #757575;
   transition: 0.4s;
+  
 }
 
 .main__banner {
@@ -188,6 +189,7 @@ a {
   min-block-size: 289px;
   margin: 0 auto;
   position: relative;
+  
 }
 
 .banner__nav {
@@ -197,9 +199,10 @@ a {
 .banner__nav__level1 {
   position: relative;
   block-size: 100%;
-  min-inline-size: 216px;
+  min-inline-size: 200px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
 }
 
 li a {
@@ -234,8 +237,8 @@ li a span {
   display: none;
 }
 .banner__img a img {
-  width: 988px;
-height: 375px;
+ width: 1067px;
+height: 378px;
 }
 
 .banner__post {
