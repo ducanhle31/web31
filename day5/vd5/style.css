@@ -177,7 +177,7 @@ a {
 /* module */
 .main {
   max-width: 100%;
-  background-color: rgb(163, 0, 5);
+  background-color: #a30005;
   font-size: 1.3rem;
   color: #757575;
   transition: 0.4s;
