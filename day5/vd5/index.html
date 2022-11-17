@@ -1,0 +1,4284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazada</title>
+
+    <!-- phan cdn google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="data:image/jpeg;base64,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"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="main mt-120">
+      <section class="main__banner grid l-2-10">
+        <!-- phan nav cua banner -->
+        <nav class="banner__nav">
+          <ul class="banner__nav__level1">
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span> Thiết Bị Điện Tử</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Điện thoại di động</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Laptop</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3 cua danh muc laptop -->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính để bàn</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Âm thanh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Camera giám sát</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Máy ảnh kỷ thuật số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy quay phim & Máy quay hành động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Màn hình vi tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy in</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Đồng hồ thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Phụ Kiện Điện Tử</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện di động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy ảnh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện máy bay camera</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị lưu trữ</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Linh kiện máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện ống kính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị mạng</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiệm máy chơi game</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>TV & Thiết Bị Điện Gia Dụng</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Tivi & Videos</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Điện gia dụng lớn</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện Tivi</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện TV</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Sức Khỏe & Làm Đẹp</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Điện thoại di động</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Laptop</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3 cua danh muc laptop -->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính để bàn</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Âm thanh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Camera giám sát</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Máy ảnh kỷ thuật số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy quay phim & Máy quay hành động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Màn hình vi tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy in</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Đồng hồ thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Hàng Mẹ, Bé & Đồ Chơi</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện di động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy ảnh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện máy bay camera</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị lưu trữ</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Linh kiện máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện ống kính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị mạng</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiệm máy chơi game</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Siêu Thị Tạp Hóa</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Điện thoại di động</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Laptop</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3 cua danh muc laptop -->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính để bàn</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Âm thanh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Camera giám sát</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Máy ảnh kỷ thuật số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy quay phim & Máy quay hành động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Màn hình vi tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy in</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Đồng hồ thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Hàng Gia dụng & Đời sống</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện di động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy ảnh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện máy bay camera</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị lưu trữ</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Linh kiện máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện ống kính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị mạng</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiệm máy chơi game</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Thời trang & Phụ kiện Nữ</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Điện thoại di động</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Laptop</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3 cua danh muc laptop -->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính để bàn</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Âm thanh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Camera giám sát</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Máy ảnh kỷ thuật số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy quay phim & Máy quay hành động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Màn hình vi tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy in</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Đồng hồ thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Thời trang & Phụ kiện Nam</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện di động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy ảnh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện máy bay camera</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị lưu trữ</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Linh kiện máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện ống kính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị mạng</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiệm máy chơi game</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Thời trang & Phụ kiện Trẻ Em</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Điện thoại di động</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Laptop</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3 cua danh muc laptop -->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính để bàn</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Âm thanh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Camera giám sát</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Máy ảnh kỷ thuật số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy quay phim & Máy quay hành động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Màn hình vi tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy in</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Đồng hồ thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Thể Thao & Du Lịch</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện di động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy ảnh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện máy bay camera</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Thiết bị lưu trữ</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Phụ kiện Máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Linh kiện máy tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiện ống kính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Thiết bị mạng</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Phụ kiệm máy chơi game</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="level1__title row row-between" href="#">
+                <span>Ôtô, Xe Máy & Thiết Bị Định Vị</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <!-- menu cap 2-->
+              <ul class="level2">
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Điện thoại di động</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Laptop</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3 cua danh muc laptop -->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Laptop cơ bản</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Laptop chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Dòng 2 trong 1</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy tính để bàn</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Âm thanh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Camera giám sát</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                  <!-- menu cap 3-->
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Máy ảnh kỷ thuật số</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy quay phim & Máy quay hành động</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Màn hình vi tính</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Các loại tai nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Loa di động </span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị Audio chuyên nghiệp</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị DJ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy đọc đĩa than</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện tại nghe</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện loa di động</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Phụ kiện âm thanh tại nhà</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span>
+                          Phụ kiện thiết bị âm thanh chuyên nghiệp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""><span> Thiết bị âm thanh di động</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span> Máy in</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy tính nguyên bộ</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính để bàn chơi game</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy tính tự ráp</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="level2__title row row-between">
+                    <span>Đồng hồ thông minh</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul class="level3">
+                    <li>
+                      <a href=""><span> Máy ảnh DSLR</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh không gương lật</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh du lịch</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy ảnh siêu zoom</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy bay camera</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Máy chụp lấy ngay & Phụ kiện</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống kính</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span> Ống nhòm</span></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><span> Các loại máy ảnh khác & Phụ kiện</span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="banner__img" href="#">
+          <a class="slides fades" href=""
+            ><img
+              src="https://lzd-img-global.slatic.net/g/icms/images/ims-web/10d2603c-06b3-468e-9f66-b3754fce487f.jpg_2200x2200q90.jpg_.webp"
+              alt=""
+          /></a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
