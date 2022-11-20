@@ -1,0 +1,38 @@
+
+/* khai báo 
+nên khai báo trên element cao nhất : html, body, :root
+cú pháp bắt đầu bằng --
+sử dingj : var(--custom-property-name) */
+:root{
+    --primary-color:#ff7171;
+    --secondary-color:green;
+    --primary-font: "cassa"
+}
+body{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+/* transition thường kết hợp với các bộ chọn :hover, :focus
+trasition nên đặt trên các bộ chọn thông thường
+vd: 
+.box =. transtion 
+.box:hover => thay đổi giá trị 
+duration thường nên để 0,2- 0,5s */
+.box:hover{
+    background: #ff7171;
+}
+.box{ height: 300px;
+   background: greenyellow;
+transform: background-color 0,5s 0s linear;}
+@keyframes scale {
+    from { width: 0; height: 0; transform: rotate(0); opacity: 0;}
+    50%{
+width: 300px;
+height: 300px;
+transform: rotate(180deg); opacity: 1;
+    }
+}
+ to{ width: 0; height: 0; transform: rotate(360deg); opacity: 0;}
+img{
+    animation: scale 2s linear 0s infinite;
+}
