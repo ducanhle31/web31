@@ -47,6 +47,7 @@ a {
 .header {
   min-height: 100vh;
   position: relative;
+ 
   background-image: url(/leospa/images/leaf.png);
   background-position: left center;
   background-repeat: no-repeat;
