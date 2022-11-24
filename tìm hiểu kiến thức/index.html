@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tìm hiểu kiến thức</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Giới thiệu về ngôn ngữ JavaScript</h1>
+      <ul>
+        <p>Javascript là gì?</p>
+
+        <li>Javascript (JS) là một ngôn ngữ kịch bản phía client</li>
+        <li>
+          Javascript được sử dụng rộng rãi trong việc kết hợp với HTML/CSS để
+          thiết kế web động.
+        </li>
+      </ul>
+      <ul>
+        <p>Javascript dùng để làm gì?</p>
+
+        <li>Sửa đổi nội dung của một trang web.</li>
+        <li>Thay đổi style và vị trí của các thành phần trên trang web.</li>
+        <li>Phản hồi với các sự kiện từ người dùng.</li>
+        <li>Thực hiện và kiểm soát việc chuyển tiếp các hình ảnh động.</li>
+        <li>Thông báo cho người dùng.</li>
+        <li>Thao tác với dữ liệu đầu vào và hiển thị kết quả sau khi xử lý.</li>
+        <li>
+          Xác thực dữ liệu đầu vào của người dùng trước khi gửi nó đến máy chủ.
+        </li>
+      </ul>
+      <ul>
+        <p>Demo một số tính năng của Javascript</p>
+        <li>
+          Thay đổi nội dung HTML như tìm một phần tử của HTML và dùng để thay
+          đổi nội dung của phần từ (Internal HTML) sang nội dung thuộc
+          Javascript.
+        </li>
+        <li>
+          JavaScript còn có thể sử dụng để thay đổi các giá trị của thuộc tính
+          trên cấu trúc HTML. Ví dụ: thay đổi thuộc tính src (source) của
+          tag<img />.
+        </li>
+        <li>
+          JS dùng để thiết kế trang web động và một số hiệu ứng hình ảnh thông
+          qua DOM.
+        </li>
+        <li>
+          Tại Việt Nam, JavaScript còn được ứng dụng để làm bộ gõ tiếng Việt
+          giống như bộ gõ hiện đang sử dụng trên các trang web.
+        </li>
+      </ul>
+      <h1>Cách nhúng mã JavaScript trong trang web</h1>
+      <ul>
+        <p>Cách 1 : Dùng cặp thẻ Script để viết js trong cùng HTML</p>
+
+        <li>
+          Tạo file index.html (Cặp thẻ Script ta có thể đặt ở trong cặp thẻ
+          'head' hoặc 'body')
+        </li>
+        <li>
+          Viết mã Javascript in ra dòng chữ “Hello world” trên màn hình console
+          của trình duyệt.
+        </li>
+        <p>
+          <img
+            src="./z3904044664820_9f7130adfd5ae45f413a87f68292339d.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <ul>
+        <p>Cách 2: Tạo file có đuôi là .js để viết mã Javascript</p>
+        <li>
+          Tạo file main.js để viết mã Javascript (main.js nằm cùng cấp với
+          index.html)
+        </li>
+        <li>
+          Nhúng file main.js vào file index.html thông qua thuộc tính src trong
+          thẻ script
+        </li>
+        <p>
+          <img
+            src="./z3904045566195_953d35717fe6106bc91fae15d08c683a.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <h1>Sử dụng Chome DevTool (console)</h1>
+      <ul>
+        <p>
+          Mở file trên trình duyệt, sau đó Bấm f12 hoặc chuột phải + inspect và
+          vào tab console để xem kết quả
+        </p>
+        <li>Ở đây chúng ta có thể thấy thông báo lỗi màu đỏ.</li>
+        <li>
+          Ở bên phải, có một liên kết có thể nhấp vào nguồn bug.html:12 với số
+          dòng nơi xảy ra lỗi.
+        </li>
+        <li>
+          Bên dưới thông báo lỗi có biểu tượng > màu xanh lam. Nó đánh dấu một
+          “dòng lệnh” nơi chúng ta có thể gõ các lệnh JavaScript. Nhấn Enter để
+          chạy chúng.
+        </li>
+        <p><img src="./chrome@2x.png" alt="" /></p>
+      </ul>
+      <h1>Các kiểu dữ liệu, biểu diễn giá trị trong JavaScript</h1>
+      <p>
+        JavaScript có 8 kiểu dữ liệu cơ bản, trong đó, có 7 kiểu dữ liệu nguyên
+        thủy (boolean, null, undefined, number, BigInt, string, symbol) và 1
+        kiểu dữ liệu dạng tham chiếu (object).
+      </p>
+
+      <ul>
+        <p>Kiểu dữ liệu boolean (kiểu logic)</p>
+        <li>
+          Boolean là kiểu dữ liệu logic chỉ bao gồm hai giá trị là true (đúng,
+          chính xác) và false (sai, không chính xác),
+        </li>
+        <p>
+          <img
+            src="./z3904115517644_4a2742b0b47b484d5c3a090f4b9d72a1.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <ul>
+        <p>Kiểu dữ liệu null</p>
+        <li>
+          Kiểu dữ liệu null là một kiểu dữ liệu đặc biệt, chỉ bao gồm một giá
+          trị là null
+        </li>
+        <p>
+          <img
+            src="./z3904124296044_64fa2e8aaf8108c653cc339064bd1f20.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <ul>
+        <p>Kiểu dữ liệu undefined</p>
+        <li>
+          Cũng tương tự như null, undefined là một kiểu dữ liệu đặc biệt trong
+          JavaScript, chỉ bao gồm một giá trị undefined
+        </li>
+        <li>Kiểu dữ liệu undefined có nghĩa là giá trị chưa được gán.</li>
+        <p>
+          <img
+            src="./z3904128927693_fba4bd135db0c2ca4a7493b3364412e3.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <ul>
+        <p>Kiểu dữ liệu number</p>
+        <li>
+          Kiểu dữ liệu number là kiểu dữ liệu dạng số (tương tự trong toán học).
+          Number trong JavaScript không có cú pháp gì đặc biệt. Bạn chỉ cần viết
+          số ra. JavaScript có hai loại số là: số nguyên và số thực.
+        </li>
+        <p>
+          <img
+            src="./z3904138748991_eb8434458c8fee33a5fe15e31f24f518.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          Ngoài những loại số trên, JavaScript còn có 3 số đặc biệt là:
+          Infinity, -Infinity và NaN.
+        </p>
+        <li>
+          Infinity: là số dương vô cùng. Đây là giá trị đặc biệt và nó lớn hơn
+          bất kỳ số nào khác. Bạn có thể sử dụng giá trị này trực tiếp hoặc thu
+          được nó bằng cách lấy lấy số dương bất kỳ chia cho 0 (toán tử chia
+          trong JavaScript là /).
+        </li>
+        <p>
+          <img
+            src="./z3904146557993_2dccf625a083c72848d31142a4269a84.jpg"
+            alt=""
+          />
+        </p>
+        <li>
+          -Infinity: là số âm vô cùng. Đây cũng là giá trị đặc biệt và nó nhỏ
+          hơn bất kỳ số nào khác. Bạn có thể sử dụng giá trị này trực tiếp hoặc
+          thu được nó bằng cách lấy lấy số âm bất kỳ chia cho 0.
+        </li>
+        <p>
+          <img
+            src="./z3904149575004_83f4c7e5865ac79fcac23895f9b67647.jpg"
+            alt=""
+          />
+        </p>
+        <li>
+          NaN: là viết tắt của Not a Number, được sử dụng để đại diện cho những
+          trường hợp tính toán sai hoặc kết quả của một phép tính không xác
+          định.
+        </li>
+        <p>
+          <img
+            src="./z3904151863649_7dfec71f758b555df8f1c5470bacd257.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <ul>
+        <p>Kiểu dữ liệu BigInt</p>
+        <li>
+          Trong JavaScript, kiểu dữ liệu number không thể biểu diễn một số
+          nguyên lớn hơn (253-1) (bằng 9007199254740991) và nhỏ hơn -(253-1).
+        </li>
+        <li>
+          Với hầu hết các trường hợp, việc sử dụng kiểu dữ liệu number là quá
+          đủ. Nhưng đôi khi, bạn vẫn cần biểu diễn và tính toán với những số
+          nguyên cực kỳ lớn. Do đó, kiểu dữ liệu BigInt ra đời nhằm giải quyết
+          vấn đề này.
+        </li>
+        <li>
+          Để biểu diễn số nguyên với kiểu BigInt, bạn chỉ cần thêm chữ cái n ở
+          phía sau
+        </li>
+        <p>
+          <img
+            src="./z3904162284298_e4beb18863d80c19df85289babbf2c9e.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <ul>
+        <p>Kiểu dữ liệu string</p>
+        <li>
+          String là kiểu dữ liệu dùng để biểu diễn chữ, văn bản, đoạn văn
+          bản,...
+        </li>
+        <li>Có ba cách để biểu diễn string trong JavaScript:</li>
+        <ol>
+          Dùng dấu nháy đơn (')
+        </ol>
+        <ol>
+          Dùng dấu nháy kép (")
+        </ol>
+        <ol>
+          Dùng dấu "backtick" (`)
+        </ol>
+        <p>
+          <img
+            src="./z3904169807031_5b057ce90486d00f7c106d7b1c44438e.jpg"
+            alt=""
+          />
+        </p>
+        <li>Dấu nháy đơn và dấu nháy kép là hoàn toàn giống nhau.</li>
+        <li>
+          Riêng với dấu "backtick", bạn có thể sử dụng biến, hằng hoặc thậm chí
+          viết một biểu thức trong đó, với cú pháp ${…}, ví dụ:
+        </li>
+        <p>
+          <img
+            src="./z3904174182532_ce9a880d3ef91a84901f7c7e300701bb.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <ul>
+        <p>Kiểu dữ liệu symbol</p>
+        <li>
+          Symbol là một kiểu dữ liệu nguyên thủy dùng để tạo ra các giá trị duy
+          nhất (unique value) và bất biến (immutable). Symbol thường được dùng
+          làm key cho kiểu dữ liệu object
+        </li>
+      </ul>
+      <ul>
+        <p>Kiểu dữ liệu object</p>
+        <li>
+          Object là kiểu dữ liệu tham chiếu. Có thể hiểu object là một tập hợp
+          gồm các cặp key - value (khóa - giá trị). Trong đó, kiểu dữ liệu của
+          key có thể là string hoặc symbol. Và value ứng với key có thể là bất
+          kỳ kiểu dữ liệu nào.
+        </li>
+      </ul>
+      <h1>Toán tử</h1>
+      <ul>
+        <p>
+          Đối tượng Math trong Javascript sẽ giúp bạn thực hiện các biểu thức
+          đặc biệt trong toán học.
+        </p>
+        <p>Một số phương thức hay được sử dụng</p>
+        <li>Math.PI : Lấy ra giá trị của số PI</li>
+        <li>Math.round(number) : Làm tròn số bình thường</li>
+        <li>Math.ceil(number) : Làm tròn số lên</li>
+        <li>Math.floor(number) : Làm tròn số xuống</li>
+        <li>Math.random() : Random 1 số ngẫu nhiên trong khoảng 0 -> 1</li>
+        <li>
+          Math.min(number1, number 2, … number n) : Lấy ra giá trị nhỏ nhất
+          trong danh sách số
+        </li>
+        <li>
+          Math.max(number1, number 2, … number n) : Lấy ra giá trị lớn nhất
+          trong danh sách số
+        </li>
+        <li>Math.pow(a, b) : Số mũ (a^b)</li>
+        <li>Math.sqrt(number) : Căn bậc 2</li>
+        <p>
+          <img
+            src="./z3904217618411_31e21592fe076634914ac1a41fd2603d.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <h1>Chuyển đổi kiểu dữ liệu</h1>
+      <ul>
+        <p>Chuyển đổi bằng Javascript function</p>
+        <li>Chuyển đổi Numbers sang Strings</li>
+        <p>
+          <img
+            src="./z3904233203216_242fc065d513fd24cd9e3a3692a97c56.jpg"
+            alt=""
+          />
+        </p>
+        <li>Chuyển đổi Booleans sang Strings</li>
+        <p>
+          <img
+            src="./z3904237074957_ea64b0ce1fcb4cb4ea68fd6ba3befb56.jpg"
+            alt=""
+          />
+        </p>
+        <li>Chuyển đổi Dates sang Strings</li>
+        <p>
+          <img
+            src="./z3904239574109_b8aa4b2d5c8ee404ee54deb0f7264579.jpg"
+            alt=""
+          />
+        </p>
+        <li>Chuyển đổi Strings sang Numbers</li>
+        <p>
+          <img
+            src="./z3904243069489_37c2f6b4d1fa7e6be751116e28dbdce0.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="./z3904248180442_0a9cb6e046884f6f25eec7325b33e7db.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="./z3904250441693_e556503afb4eb7d4a150d353ff9cafaf.jpg"
+            alt=""
+          />
+        </p>
+        <p>Tự động chuyển đổi kiểu dữ liệu</p>
+        <p>
+          <img
+            src="./z3904256189621_e411951a7edc843c5e6aa7f18c72686f.jpg"
+            alt=""
+          />
+        </p>
+        <p>Bảng chuyển đổi kiểu dữ liệu trong JavaScript</p>
+        <p>
+          <img
+            src="./z3904260006107_fc01ed619c1e2ddf05e96ce0bb0059cd.jpg"
+            alt=""
+          />
+        </p>
+      </ul>
+      <h1>Biến</h1>
+      <ul>
+        <p>Biến là gì?</p>
+        <li>
+          Biến là một định danh dùng để lưu trữ dữ liệu, thông qua biến chúng ta
+          có thể thực hiện các thao tác với dữ liệu.
+        </li>
+        <li>
+          Mỗi biến có một kiểu dữ liệu riêng, dựa vào kiểu dữ liệu của biến có
+          các thao tác khác nhau với biến.
+        </li>
+        <p>Ví dụ</p>
+        <ol>
+          Biến kiểu số thì có phép cộng, trừ, nhân, chia.
+        </ol>
+        <ol>
+          Biến kiểu chuỗi thì có độ dài của chuỗi, phép nối 2 chuỗi, …
+        </ol>
+        <p>Khai báo biến</p>
+        <ul>
+          Để khai báo biến sử dụng từ khóa : let / const
+        </ul>
+        <ul>
+          Sử dụng 2 cách sau để khai báo biến:
+        </ul>
+        <li>Khai báo biến và không gán giá trị cho biến: let age;</li>
+        <li>Khai báo biến và gán giá trị cho biến: let age = 35;</li>
+        <p>
+          <img
+            src="./z3904273496102_ba7c3ae8ab1c81d730aa055b7b8486da.jpg"
+            alt=""
+          />
+        </p>
+        <p>Quy tắc đặt tên biến</p>
+        <ul>
+          <li>Chứa các ký tự chữ, số, _ và $</li>
+          <li>Ký tự đầu tiên không được là số (nên là chữ)</li>
+          <li>Có phân biệt hoa thường</li>
+          <li>
+            Không trùng với các từ khóa của Javascript như: for, while, this, …
+          </li>
+          <li>
+            Nên đặt tên theo kiểu camelCase nếu tên biến có độ dài 2 từ trở lên
+            cho dễ đọc. Ví dụ binhphuong thì nên đặt là binhPhuong.
+          </li>
+        </ul>
+        <p>Kiểm tra kiểu dữ liệu của biến</p>
+        <ul>
+          Để kiểm tra kiểu dữ kiệu của 1 biến, chúng ta sử dụng toán tử typeof
+        </ul>
+        <ul>
+          <img
+            src="./z3904280730214_ba9efd23587fbefeb3575c453a8411ea.jpg"
+            alt=""
+          />
+        </ul>
+      </ul>
+      <h1>Một số bài tập lập trình tính toán đơn giản</h1>
+      <ul> <img src="./z3906739479300_31997e07a6fbb5f70d145fcb86ea3ae7.jpg" alt=""></ul>
+      <ul><img src="./z3906744271115_6e341bc6719f4c1ef9925e7c406c636d.jpg" alt=""></ul>
+      <ul><img src="./z3906749143112_e020aa80849991185ba8493521eca45a.jpg" alt=""></ul>
+    </div>
+  </body>
+</html>
