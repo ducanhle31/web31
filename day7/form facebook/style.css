@@ -216,6 +216,7 @@ body {
 .dk {
   align-items: flex-start;
   background-color: #00a400;
+width: 194px;
 
   border-radius: 6px;
   color: #ffffff;
@@ -236,7 +237,6 @@ body {
   text-align: center;
   margin-bottom: 26px;
 }
-.form2{
-    box-sizing: border-box;
-
+.form2 {
+  box-sizing: border-box;
 }
