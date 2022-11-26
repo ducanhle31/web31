@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Cấu trúc điều khiển là gì?</h1>
+      <p>
+        Cấu trúc điều khiển là tập hợp các qui tắc xác định thứ tự thực hiện
+        chương trình.
+      </p>
+      <p>Xét về cấu trúc, có 3 loại điều khiển:</p>
+      <li>Điều khiển trong các biểu thức.</li>
+      <li>Điều khiển giữa các phát biểu: cấu trúc điều kiện/ cấu trúc lặp.</li>
+      <li>Điều khiển trong chương trình con: gọi trả về hay đệ qui.</li>
+      <p>Xét về thiết kế ngôn ngữ, có 2 loại điều khiển:</p>
+      <li>
+        Điều khiển ngầm: được thiết kế trong ngôn ngữ lập trình. (Ví dụ: quy tắc
+        ưu tiên các toán tử)
+      </li>
+      <li>
+        Điều khiển tường minh: được xác định bởi lập trình viên. (Ví dụ: phát
+        biểu GOTO, CONTINUE, BEAK,…)
+      </li>
+      <h1>Câu lệnh điều kiện if else</h1>
+      <h2>Câu lệnh if</h2>
+      <p>Thực hiện câu lệnh trong if nếu điều kiện cho trước là đúng.</p>
+      <p>
+        <img
+          src="./z3912166290049_6275f11f9fddc46c55f81afc5c27673f.jpg"
+          alt=""
+        />
+      </p>
+      <h2>Câu lệnh if - else</h2>
+      <p>
+        Nếu điều kiện đúng thực hiện câu lệnh trong if, ngược lại nếu điều kiện
+        sai thì hiện câu lệnh trong else.
+      </p>
+      <p>
+        <img
+          src="./z3912168877176_cb95d64214b9520fc94fe8b4f30d96d2.jpg"
+          alt=""
+        />
+      </p>
+      <h2>Câu lệnh if - else if - else</h2>
+      <p>Chỉ định một điều kiện mới nếu điều kiện đầu tiên là sai</p>
+      <p>
+        <img
+          src="./z3912170777419_239e0eff2a77c6708affa2b45f19e3d8.jpg"
+          alt=""
+        />
+      </p>
+      <h1>Câu lệnh điều kiện switch case</h1>
+      <p>
+        Lênh switch case có công dụng giống như lệnh if else đó là đều dùng để
+        rẻ nhánh chương trình, ứng với mỗi nhánh sẽ có một điều kiện cụ thể và
+        điều kiện đó phải sử dụng toán tử so sánh bằng, còn đối với lệnh if else
+        thì bạn có thể truyền vào một mệnh đề bất kì và Sử dụng nhiều toán tử
+        khác nhau.
+      </p>
+      <p>Cú pháp :</p>
+      <p>
+        <img src="./z3912283861415_7427892b6bd94bb9dd9d09106f0a0b2f.jpg" alt="" />
+      </p>
+      <p>
+        Nếu như trong tất cả các case không có case nào phù hợp thì nó sẽ chạy
+        lệnh ở default, ngược lại nếu có case nào phù hợp thì chương trình sẽ
+        chạy trong case đó, đồng thời lệnh break sẽ giúp chương trình thoát khỏi
+        lệnh switch, còn nếu bạn không thêm lệnh break thì chương trình sẽ tiếp
+        tục kiểm tra và chạy tiếp ở case tiếp theo.
+      </p>
+      <p>Quy trình chạy như sau:</p>
+      <li>
+        Nếu tham số variable có giá trị là value_1 thì những đoạn code nằm bên
+        trong case 1 sẽ được thực hiện, ngược lại nó sẽ nhảy xuống case tiếp
+        theo.
+      </li>
+      <li>
+        Lúc này nếu variable có giá trị là value_2 thì những đoạn code trong
+        case 2 sẽ được thực hiện, ngược lại nó kiểm tra tiếp xem còn case nào
+        không.
+      </li>
+      <li>
+        Nhận thấy không còn case nào nữa nên nó sẽ kiểm tra có lệnh default
+        không? Vì có lệnh default nên nó sẽ chạy đoạn code trong lệnh default đó
+        rồi thoát khỏi switch case.
+      </li>
+      <p>vd</p>
+      <ul>
+        <img
+          src="./z3912192671415_6531175e8fb834e27e17c7901cf995b9.jpg"
+          alt=""
+        />
+      </ul>
+      <h1>Vòng lặp for</h1>
+      <p>
+        Vòng lặp được sử dụng để thực thi một đoạn code lặp đi lặp lại một số
+        lần nhất định Một số loại vòng lặp trong Javascript:
+      </p>
+      <li>for</li>
+      <li>while</li>
+      <li>do/while</li>
+      <li>forEach</li>
+      <p>Vòng lặp For</p>
+      <p><img src="./1.png" alt="" /></p>
+      <ul>
+        let i = 0 : khởi tạo biến cho vòng lặp
+      </ul>
+      <ul>
+        i < 10 : điều kiện để vòng lặp thực hiện
+      </ul>
+      <ul>
+        i++ : tăng giá trị biến chạy lên 1 mỗi khi thực hiện xong hành động
+      </ul>
+      <p>
+        Bạn có thể bỏ trống giá trị ban đầu trong cú pháp của vòng lặp for nếu
+        trước đó đã gán giá trị của biến chạy
+      </p>
+      <ul>
+        <img src="./2.png" alt="" />
+      </ul>
+      <p>
+        Bạn cũng có thể bỏ trống giá trị thứ hai trong cú pháp của vòng lặp for.
+        Lúc này, nếu giá trị thứ hai trả về giá trị true thì vòng lặp tiếp tục
+        thực thi, nếu là false thì vòng lặp sẽ dừng lại.
+      </p>
+      <ul>
+        <img src="./3.png" alt="" />
+      </ul>
+      <p>
+        Nếu bỏ trống giá trị thứ hai thì bắt buộc trong vòng lặp phải có lệnh
+        break, nếu không thì vòng lặp sẽ chạy mãi không dừng lại.
+      </p>
+      <p>
+        Giá trị thứ ba trong cú pháp vòng lặp for cũng không thực sự cần thiết
+        nếu như bạn thay đổi giá trị của biến chạy trong vòng lặp.
+      </p>
+      <ul>
+        <img src="./4.png" alt="" />
+      </ul>
+      <p>Sơ đồ hoạt động của vòng lặp for</p>
+      <ul>
+        <img src="./HsYV7LHZ.png" alt="" />
+      </ul>
+      <h1>Vòng lặp while</h1>
+      <p>
+        Tương tự for, thực hiện lặp lại một hành động (khối mã) cho tới khi điều
+        kiện trở thành false
+      </p>
+      <p>
+        Tuy nhiên khác với for, while không có bước khai báo và cập nhật giá trị
+        với mỗi vòng lặp
+      </p>
+      <ul>
+        <img
+          src="./z3912232344312_0f0ae073802ed20132e4efd4d9a6ed17.jpg"
+          alt=""
+        />
+      </ul>
+      <p>Sơ đồ hoạt động của while</p>
+      <ul>
+        <img src="./VZrtsLLv.png" alt="" />
+      </ul>
+      <p>Vòng lặp do-while</p>
+      <p>
+        Tương tự vòng lặp while, chỉ khác nếu lệnh trong do được thực hiện ít
+        nhất 1 lần sau đó mới kiểm tra điều kiện trong while
+      </p>
+      <ul>
+        <img
+          src="./z3912240689946_a9023d85466719881582b74fcd50c2fa.jpg"
+          alt=""
+        />
+      </ul>
+      <h1>Xử lý lỗi với try catch</h1>
+      <p>
+        Try catch là một khối lệnh dùng để bắt lỗi chương trình trong
+        javascript. Ta sử dụng try catch khi muốn chương trình không bị dừng khi
+        một lệnh nào đó bị lỗi. Thường thì đó là những lỗi do người dùng nhập
+        sai dữ liệu, hoặc người dùng thao tác bị sai.
+      </p>
+      <p>Cú pháp "try...catch"</p>
+      <p>
+        <img
+          src="./z3912257462292_dc79fecfdc643bf6472b64a640eca688.jpg"
+          alt=""
+        />
+      </p>
+      <p>Cách hoạt động của try-catch như sau:</p>
+      <ul>
+        Đầu tiên, đoạn mã trong try {...} được thực thi.
+      </ul>
+      <ul>
+        Nếu không có lỗi thì catch (err) bị bỏ qua, việc thực thi đến cuối try
+        và tiếp tục, bỏ qua catch.
+      </ul>
+      <ul>
+        Nếu có lỗi xảy ra thì quá trình thực thi try bị dừng và chương trình
+        chuyển đến đầu catch (err). Trong đó, biến err (bạn có thể sử dụng bất
+        kỳ tên nào tùy thích) sẽ chứa một đối tượng lỗi với thông tin chi tiết
+        về lỗi đã xảy ra.
+      </ul>
+      <p>ví dụ</p>
+      <ul><img src="./z3912264003468_3fb032c1a01b63e105ec49504df8f066.jpg" alt=""></ul>
+    </div>
+  </body>
+</html>
