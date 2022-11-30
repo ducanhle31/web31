@@ -37,10 +37,11 @@ findAreaOfRectangle(length=9, breadth=6);
  * @return {number} Đường kính hình tròn
  */
 function findDiameterOfCircle(r) {
-    let duongkinh=r*2;
-    console.log( " đường kính là:" + duongkinh);
+    return( r*2);
+    
+    
 }
-findDiameterOfCircle( r=5);
+console.log(findDiameterOfCircle(4));
 /**
  * Tìm chu vi hình tròn
  *
