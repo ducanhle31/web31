@@ -4,10 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>object</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
+    <h1>Objects</h1>
+    <p>
+      Về mặt định nghĩa, một đối tượng (một object) là một danh sách các item,
+      mỗi item là một cặp name-value Trong đó value có thể là: các kiểu dữ liệu
+      cơ bản, function, hay cũng có thể là một object khác (kiểu dữ liệu phức
+      hợp).
+    </p>
+    <h3>Khởi tạo object</h3>
+    <img src="./z3923047152666_bee103a9fd86d062215704a0e8be06a6.jpg" alt="" />
+    <h3>Những cách để truy cập tới các thuộc tính của object</h3>
+    <p>
+      Để lấy giá trị của 1 trường trong object, chúng ta truy cập thông qua key
+    </p>
+
+    <ul>
+      Sử dụng dot notation (.) để truy cập một property của object:
+    </ul>
+    <img src="./z3923418657890_7bbc3aeb02a008db12711ef4dc452b66.jpg" alt="" />
+    <ul>
+      Sử dụng array-like notation ([]) để truy cập một property của object:
+    </ul>
+    <img src="./z3923421350223_b002b4ffe84740781bec7271719bb692.jpg" alt="" />
+    <img src="./z3923049982094_4718361b7e53f49cef14468e48fb7a8f.jpg" alt="" />
+    <h3>Thay đổi giá trị của thuộc tính trong object</h3>
+    <p>
+      Để thay đổi giá trị của một property, bạn có thể sử dụng toán tử gán (=)
+    </p>
+
+    <img src="./z3923052563140_534b067b92fbecf9bc3b65ccc0b75f47.jpg" alt="" />
+    <h3>Thêm thuộc tính mới cho object</h3>
+    <img src="./z3923054401030_22805d49dde64912ce38a6074a8757d8.jpg" alt="" />
+    <h3>Xóa thuộc tính của object</h3>
+    <p>Để xóa key trong object ta dùng keyword delete</p>
+    <img src="./z3923056079613_a6d842b58af2975160fd73425e1ce72f.jpg" alt="" />
+    <h3>Kiểm tra một property có tồn tại hay không</h3>
+    <p>
+      Bạn sử dụng toán tử in để kiểm tra một property có tồn tại trong object
+      hay không:
+    </p>
+    <h4>propertyName in objectName</h4>
+    <p>
+      Toán tử in sẽ trả kết quả là true nếu propertyName tồn tại trong
+      objectName.
+    </p>
+    <img src="./z3923358701109_8987082b31e9bad8a33a9928fe12e45c.jpg" alt="" />
+    <h3>Sử dụng for…in để lặp qua các property của object</h3>
+    <p>
+      Để lặp qua tất cả các property của object, bạn sử dụng câu lệnh for...in:
+    </p>
+    <img src="./z3923362237531_c3c7a0d7d587601812e70103091a1d8e.jpg" alt="" />
+    <p>
+      Ở ví dụ sau, mình sẽ tạo object website và sau đó dùng câu lệnh for...in
+      để lặp qua các property của object website:
+    </p>
+    <img src="./z3923364988442_27d5cfe9c64e96b1b0b88f505d7b82d0.jpg" alt="" />
+    <h3>Method</h3>
+    <p>
+      Khi property của object là function thì tên gọi của nó là method. Có thể
+      xem method là hành động (action) của một object:
+    </p>
+    <img src="./z3923369295088_0517f26ff129e30460f2d64e5039a5b7.jpg" alt="" />
+    <p>
+      Bên cạnh việc sử dụng function expression, bạn có thể định nghĩa một
+      function thông thường bên ngoài object như sau:
+    </p>
+    <img src="./z3923373795567_4284b62653379afcf22cfd7382ff3d54.jpg" alt="" />
+    <h3>Method Shorthand</h3>
+    <p>
+      có thể định nghĩa method của một object bằng cách sử dụng cú pháp object
+      literal:
+    </p>
+    <img src="./z3923378131032_79fcf877fb02511af6838bc9354b9800.jpg" alt="" />
+    <p>
+      Bên cạnh đó, bạn cũng có thể định nghĩa method ngắn gọn hơn thông qua cú
+      pháp concise method của ES6:
+    </p>
+    <img src="./z3923380452494_5bd63b0a453ba27f39ccaa5eb612eb84.jpg" alt="" />
+    <h3>Sử dụng this bên trong method để truy cập property của object.</h3>
+    <p>
+      Làm thế nào bạn có thể truy cập đến một property bên trong method của
+      object? &nbsp; Ví dụ, bạn đang định nghĩa method getFullName cho object
+      person để trả về tên đầy đủ của một người. &nbsp; Vì vậy method này phải
+      trả kết quả bằng cách ghép firstName và lastName lại với nhau. Để truy cập
+      property firstName và lastName bên trong method getFullName thì mình sử
+      dụng keyword this. &nbsp; Keyword this tham chiếu đến object person. Do
+      đó, bạn có thể truy cập property của object thông qua this:
+    </p>
+    <p>this.propertyName;</p>
+    <img src="./z3923395115205_d894629b2324c5f03078d4552bb90d84.jpg" alt="" />
+
+    <p>Ví dụ</p>
+    <img src="./z3923062158178_02953aaa391ead56ff1496348fe0ec3f.jpg" alt="" />
+    <p>1.Lấy danh sách key của object</p>
+    <img src="./z3923064205481_7315da41f6e5f0d6c53fd9591cdbcdc0.jpg" alt="" />
+    <p>2.Lấy danh sách value của object</p>
+    <img src="./z3923065774103_83d9ba79ccdc71b66484d453c2f71919.jpg" alt="" />
+    <p>3.Kiểm tra 1 key có nằm trong object hay không</p>
+    <img src="./z3923067832872_5574c7e82eaa25da0c49f5c3e5fda43a.jpg" alt="" />
   </body>
 </html>
