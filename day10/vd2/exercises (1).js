@@ -8,14 +8,13 @@
  * @return {boolean} Số `n` cho có phải số nguyên tố hay không
  */
 function isPrime(n) {
- for (let j = 2; j < n; j++) {
+  for (let j = 2; j < n; j++) {
     if (n % j === 0) return false;
   }
   return true;
 }
 
 console.log(isPrime(1));
-
 
 /**
  * Tính tổng các số nguyên tố trong khoảng từ 1 đến n
@@ -25,19 +24,17 @@ console.log(isPrime(1));
  * @return {number} Tổng các số nguyên tố trong khoảng từ `1` đến `n`
  */
 
-    function sumOfPrimes(n) {
-      let sum = 0;
-      for (let i = 0; i <= n; i++) {
-        if (isPrime(i) === true) {
-          sum += i;
-        }
-      }
-      return sum;
+function sumOfPrimes(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    if (isPrime(i) === true) {
+      sum += i;
     }
+  }
+  return sum;
+}
 
-    console.log(sumOfPrimes(16));
-
-
+console.log(sumOfPrimes(16));
 
 /**
  * Tìm số Fibonacci thứ n
@@ -53,23 +50,21 @@ console.log(isPrime(1));
  * @return {number} Số Fibonacci thứ `n`
  */
 function fibonacci(n) {
-    let a=0;
-    let b=1;
-    let c;
-    if ( n==1) return a;
-    else if ( n==2 ) return b;
-    else{
-        for ( let i=3 ; i <= n ; i++){
-            c=a+b;
-            a=b;
-            b=c;
-
-        }
-        return c;
-
+  let a = 0;
+  let b = 1;
+  let c;
+  if (n == 1) return a;
+  else if (n == 2) return b;
+  else {
+    for (let i = 3; i <= n; i++) {
+      c = a + b;
+      a = b;
+      b = c;
     }
+    return c;
+  }
 }
-console.log( fibonacci( 2));
+console.log(fibonacci(2));
 console.log(fibonacci(10));
 console.log(fibonacci(9));
 console.log(fibonacci(7));
@@ -84,12 +79,12 @@ console.log(fibonacci(7));
  * @return {number} Giai thừa của `n`
  */
 function factorial(n) {
-    if (n === 0) {
-      return 1;
-    }
-    return n * factorial(n - 1);
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
 }
-console.log( factorial( 10));
+console.log(factorial(10));
 /**
  * Kiểm tra một số nguyên dương bất kỳ có phải số Strong hay không
  *
@@ -101,8 +96,14 @@ console.log( factorial( 10));
  *
  * @return {boolean} Số `n` có phải là số Strong hay không
  */
-function isStrong(n) {}
-
-
-
-// tìm hiểu  object
+function isStrong(n) {
+  let temp = n;
+  let total = 0;
+  while (temp != 0) {
+    let reminder = temp % 10;
+    total += factorial(reminder);
+    temp = (temp - reminder) / 10;
+  }
+  return total == n;
+}
+console.log(isStrong(2));

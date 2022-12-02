@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tìm hiểu về Array</h1>
+    <h3>Array là gì</h3>
+    <p>
+      Mảng (Array) là một nơi cho phép chúng ta lưu trữ nhiều giá trị theo thứ
+      tự nhất định trong một biến duy nhất.
+    </p>
+    <p>
+      Nó có thể chứa nhiều giá trị với kiểu dữ liệu khác nhau như là chuỗi, số,
+      đối tượng... và chiều dài của mảng có thể tự động tăng lên hay giảm xuống
+      khi chúng ta thực hiện thêm hay xóa các phần tử trong mảng.
+    </p>
+    <p>Vị trí của các phần tử trong mảng sẽ bắt đầu từ số 0</p>
+    <h5>Khai báo mảng: let arr = [value1, value2, ..., valueN]</h5>
+    <ul>
+      arr : tên mảng
+    </ul>
+    <ul>
+      value1, value2, …, valueN : Các giá trị của mảng
+    </ul>
+    <img src="./z3928118478832_aad8449c5a968e1f0269904f36428041.jpg" alt="" />
+    <h3>Sự khác nhau giữa Array và Object</h3>
+    <h5>Mảng (Arrays): Thứ Tự Của Dữ Liệu Là Điều Quan Trọng Nhất</h5>
+    <p>
+      Khi bạn lấy thông tin từ một mảng, bạn sử dụng index của từng thành phần
+      trong mảng. Mảng trong JavaScript là 0-indexed, nghĩa là các phần tử trong
+      mảng được đánh dấu từ 0 thay vì 1.
+    </p>
+    <p>
+      var book = ['foreword', 'boyWhoLived', 'vanishingGlass',
+      'lettersFromNoOne', 'afterword'];
+    </p>
+    <h5>
+      Đối Tượng (Objects) Tiêu Đề Của Thông Tin (Thuộc Tính Của Đối Tượng) Là
+      Quan Trọng Nhất
+    </h5>
+    <p>
+      Object được sử dụng khi bạn muốn sắp xếp dữ liệu dựa vào tên của chúng
+    </p>
+    <h5>Khi nào nên sử dụng mảng. Khi nào nên sử dụng Object.</h5>
+    <p>Bạn nên sử dụng các đối tượng khi bạn muốn tên phần tử là chuỗi (văn bản).</p>
+    <p>Bạn nên sử dụng mảng khi muốn tên phần tử là số.</p>
+    <h3>Thuộc tính length</h3>
+    <p>
+      length là một thuộc tính được tính bằng số index lớn nhất +1, nó sẽ cập
+      nhật khi chúng ta thay đổi nội dung array. Việc thay đổi kích cỡ array tức
+      là bổ sung, gộp, hoặc loại bỏ phần tử bên trong array.
+    </p>
+    <img src="./z3928263669024_02ecff2a4f4f518756845e5402b1bf63.jpg" alt="" />
+    <p>
+      length là một giá trị có thể “ghi” được. Khi ta giảm giá trị length thì
+      array bị “xén” đi.
+    </p>
+    <img src="./z3928269797711_2c3f3fbd8d4363efff2b918ab42d8fab.jpg" alt="" />
+    <p>muốn làm rỗng array thì chỉ cần đặt length = 0</p>
+    <img src="./z3928272324914_a0d239b2a6fdf17bd6225f4039f789f4.jpg" alt="" />
+    <h3>Truy cập các phần tử trong mảng</h3>
+    <p>Các phần tử trong mảng được truy cập thông qua chỉ số (index)</p>
+    <p>Chỉ số của mảng bắt đầu từ 0, kết thúc ở arr.length - 1</p>
+    <p>Thông thường, chúng ta truy cập vào phần tử mảng để:</p>
+    <ul>
+      Lấy giá trị của phần tử mảng: arr[index]
+    </ul>
+    <img src="./z3928311047026_a4bc4a4f8264f88b2d6dff08abeb825e.jpg" alt="" />
+    <ul>
+      Cập nhật giá trị cho phần tử mảng arr[index] = new_value
+    </ul>
+    <img src="./z3928313395144_8ddb7d4ce0ca65d3c0b82715f748e1bd.jpg" alt="" />
+    <h3>Các cú pháp cơ bản</h3>
+    <h5>Thêm một phần tử mới vào cuối mảng</h5>
+    <p>
+      cú pháp: array.push(giá trị của phần tử mà bạn muốn thêm vào cuối mảng)
+    </p>
+    <p>
+      var mobile = ["HTC", "Nokia", "SamSung", "LG", "Apple"];
+      document.getElementById("demo1").innerHTML = mobile;
+      mobile.push("Lenovo"); document.getElementById("demo2").innerHTML =
+      mobile;
+    </p>
+    <h5>Thêm một phần tử mới vào vị trí đầu mảng</h5>
+    <p>array.unshift(giá trị của phần tử mà bạn muốn thêm vào đầu mảng)</p>
+    <p>
+      var mobile = ["HTC", "Nokia", "SamSung", "LG", "Apple"];
+      document.getElementById("demo1").innerHTML = mobile;
+      mobile.unshift("Lenovo"); document.getElementById("demo2").innerHTML =
+      mobile;
+    </p>
+    <h5>Xóa phần tử ở vị trí đầu mảng</h5>
+    <p>array.shift()</p>
+    <p>
+      var mobile = ["HTC", "Nokia", "SamSung", "LG", "Apple"];
+      document.getElementById("demo1").innerHTML = mobile; mobile.shift();
+      document.getElementById("demo2").innerHTML = mobile;
+    </p>
+    <h5>Xóa phần tử cuối mảng</h5>
+
+    <p>Cú pháp: array.pop()</p>
+    <p>
+      var mobile = ["HTC", "Nokia", "SamSung", "LG", "Apple"];
+      document.getElementById("demo1").innerHTML = mobile; mobile.pop();
+      document.getElementById("demo2").innerHTML = mobile;
+    </p>
+    <h5>Xóa phần tử ở vị trí bất kỳ trong mảng</h5>
+    <p>
+      phương thức splice() để xóa phần tử mảng thì ta sử dụng cú pháp như sau:
+    </p>
+    <p>array.splice(start, length)</p>
+    <ul>
+      Tham số "start" là chỉ số của phần tử bắt đầu được xóa.
+    </ul>
+    <ul>
+      Tham số "length" là số lượng phần tử mà bạn muốn xóa.
+    </ul>
+    <p>
+      var data = ["HTC", "Nokia", "Apple", "LG", "Honda", "SYM", "Suzuki"];
+      data.splice(1,4); document.write(data);
+    </p>
+    <p>
+      Nếu ta bỏ trống tham số "length" thì phương thức splice() sẽ xóa tất cả
+      những phần tử bắt đầu từ phần tử có chỉ số là start cho đến hết mảng.
+    </p>
+    <h5>Thêm phần tử ở vị trí bất kỳ trong mảng</h5>
+    <p>
+      phương thức splice() để thêm phần tử mới vào mảng thì ta sử dụng cú pháp
+      như sau:
+    </p>
+    <p>
+      array.splice(start, 0, phần tử mới 1, phần tử mới 2, phần tử mới 3, ....)
+    </p>
+    <ul>
+      Tham số "start" là chỉ số của phần tử nơi mà bạn muốn chèn các phần tử mới
+      ngay tại đó.
+    </ul>
+    <ul>
+      Tham số "0" là số không.
+    </ul>
+    <ul>
+      Các tham số "phần tử mới" là những phần tử mà bạn muốn thêm vào mảng.
+    </ul>
+    <p>
+      var mobile = ["HTC", "Nokia", "SamSung", "LG", "Apple"]; mobile.splice(2,
+      0, " a ", " b ", " c ", " d "); document.write(mobile);
+    </p>
+    <p>
+      Nếu ta thay giá trị của tham số 0 thành một số khác thì phương thức
+      splice() ngoài việc thêm phần tử mới vào mảng, nó còn xóa đi những phần tử
+      nằm phía sau phần tử có chỉ số là start với số lượng phần tử bị xóa sẽ
+      bằng với giá trị của tham số này.
+    </p>
+    <p>
+      var mobile = ["HTC", "Nokia", "SamSung", "LG", "Apple"]; mobile.splice(1,
+      3, " a ", " b ", " c ", " d "); document.write(mobile);
+    </p>
+    <h5>Thay thế phần tử trong mảng</h5>
+    <p>thay thế nội dung của nó bằng cách sử dụng một phép gán</p>
+    <ul>
+      const items = ['a', 'b', 'c', 'd', 'e', 'f'] const i = 2 items[i] =
+      '--NEW-ITEM--' console.log(items);
+    </ul>
+    <ul>
+      //[ 'a', 'b', '--NEW-ITEM--', 'd', 'e', 'f' ]
+    </ul>
+    <p>
+      Phương thức fill() điền (sửa đổi) tất cả các phần tử của một mảng từ một
+      chỉ mục bắt đầu (số không mặc định) đến một chỉ mục kết thúc (độ dài mảng
+      mặc định) với một giá trị tĩnh
+    </p>
+    <p>Cú pháp: arr.fill(value[, start[, end]])Với:</p>
+    <ul>
+      value: Là giá trị cần fill.
+    </ul>
+    <ul>
+      start (Optional): Vị trí bắt đầu fill, mặc định là 0
+    </ul>
+    <ul>
+      end (Optional): Vị trí kết thúc fill, mặc định là this.length
+    </ul>
+    <p>
+      const items = ['a', 'b', 'c', 'd', 'e', 'f']
+      console.log(items.fill('--NEW-ITEM--', 2, 3))
+    </p>
+    <p>//[ 'a', 'b', '--NEW-ITEM--', 'd', 'e', 'f' ]</p>
+    <h5>Ghép các mảng lại với nhau</h5>
+    <p>
+      Phương thức concat() được dùng để ghép các mảng con lại với nhau rồi trả
+      về một mảng mới.
+    </p>
+    <p>Cú pháp: var tên mảng = array1.concat(array2, array3, ...., arrayN);</p>
+    <ul>
+      var mobile = ["HTC", "Nokia"]; var motorbike = ["Honda", "Yamaha",
+      "Suzuki"]; var SinhVien = ["Nguyễn Thành Nhân", 1993]; var city = ["Cần
+      Thơ", "Vĩnh Long"]; var data = motorbike.concat(city, SinhVien, mobile);
+      document.write(motorbike.concat(city, SinhVien));
+      document.write(motorbike.concat(city));
+    </ul>
+    <h5>Trích xuất một phần của mảng</h5>
+    <p>
+      Phương thức slice() được dùng để trích xuất một phần của mảng ban đầu rồi
+      trả về một mảng mới.
+    </p>
+    <p>Cú pháp: var tên mảng = array.slice(start, end);</p>
+    <p>
+      var data = ["HTC", "Nokia", "Apple", "LG", "Honda", "SYM", "Suzuki"]; var
+      abc = data.slice(1,5); document.write(abc);
+    </p>
+    <h3>Duyệt qua các giá trị trong mảng</h3>
+    <h5>Sử dụng vòng lặp for để duyệt mảng</h5>
+    <p>
+      Kết hợp index với vòng lặp for và thuộc tính length để chỉ định số vòng
+      lặp, chúng ta có thể truy cập lần lượt tới các phần tử trong mảng và qua
+      đó thực hiện việc duyệt mảng trong JavaScript
+    </p>
+    <ul>
+      let pref = ["Ha Noi", "Thanh Hoa", "Nam Dinh"]; for ( i = 0; i <
+      pref.length; i++){ console.log(pref[i]); }
+    </ul>
+    <ul>
+      Ha Noi Thanh Hoa Nam Dinh
+    </ul>
+    <p>for … of cũng được sử dụng để duyệt qua các giá trị của mảng</p>
+    <ul>let numbers = [1, 2, 3, 4, 5, 6]
+
+
+for (const value of numbers) {
+    console.log(value);
+}
+</ul>
+    <h5>Duyệt mảng trong JavaScript với vòng lặp while</h5>
+    <ul>
+      let pref = ["Ha Noi", "Thanh Hoa", "Nam Dinh"]; let i = 0; while (i <
+      pref.length){ console.log(pref[i]); i++; }
+    </ul>
+    <h5>vòng lặp forEach</h5>
+    <p>[array].forEach(function(value, index) { // Code thực thi })</p>
+    <ul>
+      Array : Mảng các giá trị
+    </ul>
+    <ul>
+      Value : Đại điện cho giá trị của các phần tử trong mảng
+    </ul>
+    <ul>
+      Index : Đại điện cho chỉ số của các phần tử trong mảng
+    </ul>
+    <p>
+      let pref = ["Ha Noi", "Thanh Hoa", "Nam Dinh"];
+      pref.forEach(function(element){ console.log(element); });
+    </p>
+
+  </body>
+</html>
