@@ -18,6 +18,7 @@ const guessList = {
  *
  * @return {string} Câu chào
  */
+
 function greeting(name) {
     if (name in guessList) {
         return "Hi, I'm " + name + ", and I'm from " + guessList[name] + "!";
@@ -25,7 +26,7 @@ function greeting(name) {
         return "Hi! I'm guess.";
     }
 }
-
+console.log( greeting());
 // Danh sách thành viên trong 1 gia đình
 // Tên là key, tuổi là value
 const myFamily = {
@@ -45,7 +46,11 @@ const myFamily = {
  *
  * @return {{[key: string]: number}} Danh sách thành viên và số tuổi tương ứng sau `n` năm
  */
-function afterNYears(obj, n) {}
+function afterNYears(obj, n) {
+
+   console.log(Object.keys(myFamily));
+
+}
 
 /**
  * Đảo ngược key thành value, value thành key của một object bất kỳ
@@ -72,8 +77,10 @@ const items = {
  *
  * @return {number} Tổng giá trị các items
  */
-function totalAmount(items) {}
-
+function totalAmount(items) { 
+    return this.tv+ this.ipad;
+}
+console.log( totalAmount);
 /**
  * Lọc và trả về danh sách các items có giá trị cao (value >= 1000) trong danh sách đầu vào
  *
