@@ -63,14 +63,20 @@ biểu thị thời gian tương ứng sau n giây
  * calcTime('20:15:45', 15); // '20:16:00'
  * calcTime('20:15:45', -46); // '20:14:59'
  */
+//b1 tách giá trị giờ phút giây
+// b2 công số giây vs số n
+// b3 lấy tổng số giây chia cho 60 lấy số phút
+// b4 kiểm tra
+// nếu phần  dư ==0 thì tăng số giây , ghép chuỗi kết quả và trả về
+// nếu số phút >0 lặp lại quy trình số phút , ... giờ
 
-function calcTime (time, n){
-	let d = new Date(time);
-	d.setTime(n);
-  
+function calcTime(time, n) {
+  let date = new Date("2022-01-01 ${time}");
+  date.setSeconds(date.getSeconds() + n);
+  return '${string(date.getHours()).padStart(2,"0")}:${string(date.getMinutes(). padStart(2,"0")}:${string(date.getSeconds()).padStart(2,"0")}';
 }
-console.log(calcTime("20:10:30", 10));
 
+console.log(calcTime("20:10:30", 10));
 
 /**
  * Kiểm tra một chuỗi có phải đối xứng hay không (viết xuôi hay viết
@@ -85,34 +91,20 @@ dấu cách)
  * isPalindrome('Race car'); // true, vì Race car = racecar = racecar
  */
 /* cách làm
-B1 khai báo biến arr status 
-b2 dùng vòng lặp for để kiểm tra
- nếu chuỗi đối xứng trả về true
- nếu chỗi không đối xứng trả về false
- b3 in ra kết quả
+b1 chuyển về chữ hoa | thường
+b2 loại bỏ ký tự khoảng trắng
+b3 đảo ngc ký tự 
+b4 so sánh chuỗi đảo ngc vs chuỗi ban đâu trả về kq
 
  */
-function isPalindrome(str)  {
-    
-    let arrStatus = [];
-    for (let i = 0; i < str.length / 2; i++) {
-      let statusEachCharacter;
-      if (str[i] == str[str.length - 1 - i]) {
-        statusEachCharacter = false;
-      } else {
-        statusEachCharacter = true;
-      }
-      arrStatus.push(statusEachCharacter);
-    }
-    if (arrStatus.indexOf(false) != -1) {
-      return true;
-    } else return false;
-  }
- console.log(isPalindrome('Race car'));
- console.log(isPalindrome("le anh"));
+function isPalindrome(str) {
+  const normalStr = str.toLowerCase().replaceAll("", "");
+  return normalStr === normalStr.split("").reverse().join("");
+}
+console.log(isPalindrome("Race car"));
+console.log(isPalindrome("le anh"));
 
-
- /**
+/**
  * Một con ốc sên leo từ đáy giếng lên miệng giếng, biết ban ngày leo
 được x mét, ban đêm lại bị tụt xuống y mét, hỏi sau bao nhiêu ngày thì
 ốc sên sẽ leo lên tới miệng giếng
@@ -141,8 +133,7 @@ function snail(h, x, y) {
   }
   return day;
 }
-console.log(snail(10,3,1));
-
+console.log(snail(10, 3, 1));
 
 /**
 * Sắp xếp các chữ số trong một số nguyên dương bất kỳ để tạo ra số nhỏ
@@ -164,6 +155,7 @@ nhất (giữ nguyên số chữ số ban đầu, bao gồm cả số 0)
  * Bước 5: Sử dụng vòng lặp for và câu điều kiện if để đổi vị trí nếu số đầu tiên trong mảng là 0
  * Bước 6: Trả về kết quả chuyển mảng thành chuỗi sau đó chuyển chuỗi thành số
  */
+
 function sortNumber(n) {
   if (n < 0 && n % 2 !== 0) return "Invalid number";
   else {
@@ -184,8 +176,8 @@ function sortNumber(n) {
     return Number(arr2.join(""));
   }
 }
-console.log( sortNumber(1234560));
- /* Đếm số lần xuất hiện của mỗi phần tử trong mảng, nếu là chuỗi thì
+console.log(sortNumber(21134560));
+/* Đếm số lần xuất hiện của mỗi phần tử trong mảng, nếu là chuỗi thì
 không phân biệt chữ hoa chữ thường
 *
 * @param {any[]} arr - Mảng chứa giá trị bất kỳ
@@ -200,11 +192,38 @@ trị trong mảng và value là số lần xuất hiện trong mảng
 * @example
 * let result = countElement(['Ba', 'Béo', 'Ba']);
 * console.log(result); // {ba: 2, béo: 1} */
-function countElement(arr) {
+/* Cách làm
+ 
+ */
 
+function countElement(arr) {
+ return arr.reduce((result ,item) => { let key = String(item).toLowerCase();
+result[key] = result[key] +1 || 1 ;
+return result;},{});
 }
 
-
+console.log(
+  countElement([
+    1,
+    2,
+    3,
+    4,
+    4,
+    5,
+    5,
+    7,
+    7,
+    8,
+    8,
+    9,
+    9,
+    9,
+    " ba ",
+    "Ba",
+    "Ba",
+    "béo",
+  ])
+);
 
 /**
  * Object chứa thông tin về sinh viên
@@ -266,6 +285,11 @@ ngày sinh tăng dần
 * { id: 2, name: "Tuấn Anh", dateOfBirth: '1996-03-31', point: 4.5 },
 * ]
 */
-function sortStudents(students) {
+function sortStudents(students) {}
 
-}
+
+
+
+
+
+
