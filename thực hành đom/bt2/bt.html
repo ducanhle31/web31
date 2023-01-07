@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    #show-hide{
+  position: absolute;
+  left: 323px;
+  background-color: white;
+  border: none;
+  top: 10px;
+}
+#show-hide{
+  display: none;
+}
+   </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter username" id="username">
+    <input type="password" placeholder="Enter password" id="password">
+    <button id="btn-login">Login</button>
+    <button id="show-hide">Show</button>
+<script>
+  const users = [
+  {
+    username: "bob",
+    password: "123"
+  },
+  {
+    username: "alice",
+    password: "456"
+  }
+];
+
+let name = document.getElementById("username");
+
+let pass = document.getElementById("password");
+
+let enter = document.getElementById("btn-login");
+
+let change = document.getElementById("show-hide");
+change.style.left = "319px";
+//Hiển thị thông báo về đăng nhập tài khoản
+enter.onclick = function () {
+  let userid = name.value;
+  let userpass = pass.value;
+
+  if (userid == "") {
+    alert("chưa điền tài khoản");
+  } else if (userpass == "") {
+    alert("chưa điền mật khẩu");
+  } else {
+    result = "Tài khoản hoặc mật khẩu không đúng!";
+    for (let i = 0; i < users.length; i++) {
+      if (
+        userid === users[i]["username"] &&
+        userpass === users[i]["password"]
+      ) {
+        result = "Đăng nhập thành công";
+      }
+    }
+    alert(result);
+  }
+};
+//thay đổi giữa Show và Hide password theo yêu cầu người dùng
+change.addEventListener("click", function () {
+  if (pass.type == "password") {
+    pass.type = "text";
+    change.innerText = "Hide";
+    change.style.left = "326px";
+  } else {
+    pass.type = "password";
+    change.innerText = "Show";
+    change.style.left = "319px";
+  }
+});
+
+// //giữ Show để hiện password
+
+// change.addEventListener("mousedown", function () {
+//   console.log("keydown");
+//   pass.type = "text";
+// });
+
+// change.addEventListener("mouseup", function () {
+//   pass.type = "password";
+// });
+
+//xuất hiện option Show password cho người dùng và biến mất khi không ghi gì ở password
+pass.addEventListener("input", function () {
+  if (pass.value != "") {
+    change.style.display = "block";
+  } else {
+    change.style.display = "none";
+  }
+});
+
+</script>
+</body>
+</html>

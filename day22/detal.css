@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    padding-left: 200px;
+  background-color: rgb(124, 124, 124);
+  color: azure;
+  font-size: 12px;
+
+}
+.right{
+    margin-left: 20px;
+    margin-right: 150px;
+    text-align: justify;
+}
+.heading2{
+    display: flex;
+}

@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: rgb(125, 123, 123);
+    color: antiquewhite;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+.container{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.game{
+    width: 202.5px;
+    background-color: #32383e;
+    box-shadow:0 0.5rem 1rem rgba(0,0 ,0, 0.15) ;
+    transition: all 0.2s ease-in-out;
+    border-radius: 8px;
+
+}
+.game-link{
+    color: inherit;
+    text-decoration: none;
+}
+.game-info{
+    padding: 8px;
+    color: azure;
+}
+.game:hover{
+    transform: scale(1.05);
+}
+.game-short-description{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.game-meta-info{
+    display: flex;
+    justify-content:flex-end;
+    gap: 10px;
+
+}

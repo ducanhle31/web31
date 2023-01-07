@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <style>
+        .yellow{
+  background-color: yellow;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover{
+  font-size: 25px;
+  font-weight: bolder;
+}
+.emoji{
+  font-size: 25px;
+}
+    </style>
+</head>
+<body>
+    <p>
+        Hey, you're not permitted in there. It's restricted. You'll be deactivated for sure.. Don't call me a mindless
+        philosopher, you overweight glob of grease! Now come out before somebody sees you. Secret mission? What plans?
+        What are you talking about? I'm not getting in there! I'm going to regret this. There goes another one. Hold
+        your fire. There are no life forms. It must have been short-circuited. That's funny, the damage doesn't look as
+        bad from out here. Are you sure this things safe?
+
+        What a piece of junk. She'll make point five beyond the speed of light. She may not look like much, but she's
+        got it where it counts, kid. I've added some special modifications myself. We're a little rushed, so if you'll
+        hurry aboard we'll get out of here. Hello, sir. Which way? All right, men. Load your weapons! Stop that ship!
+        Blast 'em! Chewie, get us out of here! Oh, my. I'd forgotten how much I hate space travel.
+
+        Run, Luke! Run!
+    </p>
+    <script>
+// Highlight tất cả các từ có độ dài lớn hơn hoặc bằng 8 ký tự trong đoạn văn (background = “yellow”)
+
+const p = document.querySelector("p");
+let pArr = p.innerText.split(" ");
+let result = [];
+for (let i of pArr) {
+  if (i.length >= 8) {
+    result.push(`<span class="yellow">${i}</span>`);
+  } else {
+    result.push(i);
+  }
+}
+p.innerHTML = result.join(" ");
+
+// Thêm link hiển thị text “facebook” link đến trang facebook.com ở sau thẻ p
+
+let linkFB = document.createElement("a");
+linkFB.innerText = "Facebook";
+linkFB.href = "https://www.facebook.com/";
+
+p.insertAdjacentElement("afterend", linkFB);
+// Đếm số từ có trong đoạn văn. Tạo 1 thẻ div để hiển thị số từ
+
+let total = 0;
+for (let i of pArr) {
+  total++;
+}
+
+linkFB.insertAdjacentHTML(
+  "afterend",
+  `  <div><br/> Số từ trong đoạn văn trên là ${total}.</div>`
+);
+
+// Thay thế các ký hiệu ? => 🤔, ! => 😲 (CÓ THỂ DÙNG .replaceAll)
+
+let word = p.innerText.split("");
+let result2 =[];
+for (let i of word) {
+  if(i == "?"){
+    result2.push(`<span class="emoji">&#128533;</span>`);
+  }
+  else if(i == "!"){
+    result2.push(`<span class="emoji">&#128558;</span>`);
+  }
+  else{
+    result2.push(i);
+  }
+}
+let p2 = document.createElement("p");
+p2.innerHTML = result2.join("");
+
+document.body.appendChild(p2);
+
+
+            // p2.innerText = p.innerText.replaceAll("?", "🤔");
+            // p2.innerText = p.innerText.replaceAll("!", "😲");
+
+
+    </script>
+</body>
+</html>

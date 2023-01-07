@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="hide-show">hide</button>
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+  <li>Item 7</li>
+</ul>
+<input type="text" />
+<button id="add">add</button>
+<button id="remove">remove</button>
+<script>
+    // Nối tiếp vào bài tập buổi 1 - Bài số 3: ul-li
+// Thêm 1 nút add + 1 ô input để nhập text (tạo bằng Javascript).
+// Mỗi khi bấm nút vào nút add thêm 1 thẻ li có nội dung là nội dung trong ô input vào cuối danh sách ul
+// Trường hợp không có nội dung trong ô input mà bấm add thì cảnh báo (sử dụng alert)
+// Thêm 1 nút remove (tạo bằng Javascript). Chức năng để xóa thẻ li cuối cùng của danh sách ul
+// Thêm 1 nút Hide trên đầu của danh sách ul
+// Khi bấm vào Hide thì ul sẽ ẩn. Đồng thời label của nút Hide => Show
+// Và ngược lại, khi bấm vào Show thì ul sẽ hiện. Đồng thời label của nút Show => Hide
+
+const inputText = document.querySelector("input");
+const ulList = document.querySelector("#list");
+const btnAdd = document.querySelector("#add");
+const btnRemove = document.querySelector("#remove");
+const btnHideShow = document.querySelector("#hide-show");
+
+btnAdd.addEventListener("click", function () {
+  if (inputText.value === "") {
+    alert("bạn chưa nhập nội dung");
+  } else {
+    const newLi = document.createElement("li");
+    newLi.innerText = inputText.value;
+    ulList.appendChild(newLi);
+    inputText.value = "";
+  }
+});
+
+btnRemove.addEventListener("click", function () {
+  const lastLi = document.querySelector("li:last-child");
+  ulList.removeChild(lastLi);
+});
+
+btnHideShow.addEventListener("click", function () {
+  if (btnHideShow.innerText === "hide") {
+    ulList.style.display = "none";
+    btnHideShow.innerText = "show";
+  } else {
+    ulList.style.display = "block";
+    btnHideShow.innerText = "hide";
+  }
+});
+
+</script>
+</body>
+</html>

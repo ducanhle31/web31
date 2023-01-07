@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f7f1f1;
+      }
+
+      img {
+        display: inline-block;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      .container {
+        background-color: #ff6666;
+        padding: 50px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: 20px solid #ff6666;
+        border-left: 20px solid #ff6666;
+        transition: all 0.2s ease-in;
+        z-index: -1;
+        opacity: 0;
+      }
+
+      .container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 20px solid #ff6666;
+        border-right: 20px solid #ff6666;
+        transition: all 0.2s ease-in;
+        z-index: -1;
+        opacity: 0;
+      }
+
+      /*  .container:hover::before {
+        top: -50px;
+        left: -50px;
+        opacity: 0.2;
+      } */
+
+      /* .container:hover::after {
+        bottom: -50px;
+        right: -50px;
+        opacity: 0.2;
+      }
+ */
+      h1 {
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: normal;
+        font-size: 2.6rem;
+        letter-spacing: 0.05em;
+        color: #fff;
+      }
+
+      .todo-input {
+        height: 3rem;
+        padding: 0 50px;
+      }
+
+      .todo-input input {
+        min-width: 350px;
+        height: 100%;
+        line-height: 40px;
+        border: none;
+        padding-left: 6px;
+        padding-right: 6px;
+        outline: none;
+      }
+      .todo-input input:focus {
+        outline: none;
+      }
+      .todo-input button {
+        text-transform: uppercase;
+        display: inline-block;
+        height: 100%;
+        padding: 0 1.3rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: #ff6666;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        outline: none;
+      }
+
+      .todo-input button:hover {
+        background-color: #ff5e5e;
+      }
+
+      .todo-option {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 50px 0;
+      }
+
+      .todo-option-item {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 6px;
+        margin-left: 6px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+
+      .todo-option-item input {
+        margin-right: 4px;
+      }
+
+      .todo-container {
+        margin-top: 20px;
+      }
+
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f4f4f4;
+        margin-bottom: 6px;
+        padding: 15px 50px;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .todo-item.active-todo .todo-item-title p {
+        position: relative;
+        font-style: italic;
+      }
+
+      .todo-item.active-todo .todo-item-title p::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+      }
+
+      .todo-item-title {
+        display: flex;
+        align-items: center;
+      }
+
+      .todo-item-title input {
+        margin-right: 6px;
+      }
+
+      .btn {
+        opacity: 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 20px;
+        transition: all 0.2s ease-in;
+      }
+      .todo-item:hover .btn {
+        opacity: 1;
+      }
+
+      .btn img {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
+
+      .todos-empty {
+        padding-left: 50px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+
+      <!-- Box Nhập công việc -->
+      <div class="todo-input">
+        <input type="text" placeholder="Nhập công việc" id="todo-input" />
+        <button id="btn-add">Thêm</button>
+      </div>
+
+      <!-- Box chọn option (all - Hoàn thành - Chưa hoàn thành) -->
+      <div class="todo-option">
+        <div class="todo-option-item">
+          <input
+            type="radio"
+            name="todo-option-item"
+            id="all"
+            checked
+            value="1"
+          />
+          <label for="all">All</label>
+        </div>
+        <div class="todo-option-item">
+          <input type="radio" name="todo-option-item" id="unactive" value="2" />
+          <label for="unactive">Chưa hoàn thành</label>
+        </div>
+        <div class="todo-option-item">
+          <input type="radio" name="todo-option-item" id="active" value="3" />
+          <label for="active">Hoàn thành</label>
+        </div>
+      </div>
+
+      <!-- Danh sách todo -->
+      <div class="todo-container">
+        <div class="todo-list">
+          <div class="todo-item active-todo">
+            <div class="todo-item-title">
+              <input type="checkbox" />
+              <p>Làm bài tập Javascript Phần array + string</p>
+            </div>
+            <div class="option">
+              <button class="btn btn-update">
+                <img
+                  src="https://raw.githubusercontent.com/buihien0109/todolist-fake-api/565eb12240ea4fe92e3f6a6e9689d93023ec9334/public/img/pencil.svg"
+                  alt="icon"
+                />
+              </button>
+              <button class="btn btn-delete">
+                <img
+                  src="https://raw.githubusercontent.com/buihien0109/todolist-fake-api/565eb12240ea4fe92e3f6a6e9689d93023ec9334/public/img/remove.svg"
+                  alt="icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-item-title">
+              <input type="checkbox" />
+              <p>Mua đồ ăn trưa</p>
+            </div>
+            <div class="option">
+              <button class="btn btn-update">
+                <img
+                  src="https://raw.githubusercontent.com/buihien0109/todolist-fake-api/565eb12240ea4fe92e3f6a6e9689d93023ec9334/public/img/pencil.svg"
+                  alt="icon"
+                />
+              </button>
+              <button class="btn btn-delete">
+                <img
+                  src="https://raw.githubusercontent.com/buihien0109/todolist-fake-api/565eb12240ea4fe92e3f6a6e9689d93023ec9334/public/img/remove.svg"
+                  alt="icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Chức năng
+      // 1. Thêm công việc
+      // 3. Xóa công việc
+      // 5. Thay đổi trạng thái công việc
+
+      let todos = [];
+
+      // Truy cập
+      const todoListEl = document.querySelector(".todo-list");
+      const todoOptionEls = document.querySelectorAll(
+        ".todo-option-item input"
+      );
+      const todoInputEl = document.getElementById("todo-input");
+      const btnAdd = document.getElementById("btn-add");
+
+      // API lấy danh sách công việc
+      let getTodos = async () => {
+        try {
+          let res = await axios.get("/todos");
+          todos = res.data;
+
+          renderTodo(todos);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      const renderTodo = (arr) => {
+        todoListEl.innerHTML = "";
+
+        // Kiểm tra danh sách công việc có trống hay không
+        if (arr.length == 0) {
+          todoListEl.innerHTML = `<p class="todos-empty">Không có công việc nào trong danh sách</p>`;
+          return;
+        }
+
+        // Hiển thị danh sách
+        let html = "";
+        arr.forEach((t) => {
+          html += `
+                  <div class="todo-item ${t.status ? "active-todo" : ""}">
+                      <div class="todo-item-title">
+                          <input
+                              type="checkbox" ${t.status ? "checked" : ""}
+                              onclick="toggleStatus(${t.id})"
+                          />
+                          <p>${t.title}</p>
+                      </div>
+                      <div class="option">
+                          <button class="btn btn-update">
+                              <img src="https://raw.githubusercontent.com/buihien0109/todolist-fake-api/565eb12240ea4fe92e3f6a6e9689d93023ec9334/public/img/pencil.svg" alt="icon" />
+                          </button>
+                          <button class="btn btn-delete" onclick="deleteTodo(${
+                            t.id
+                          })">
+                              <img src="https://raw.githubusercontent.com/buihien0109/todolist-fake-api/565eb12240ea4fe92e3f6a6e9689d93023ec9334/public/img/remove.svg" alt="icon" />
+                          </button>
+                      </div>
+                  </div>
+              `;
+        });
+
+        todoListEl.innerHTML = html;
+      };
+
+      // Xóa công việc
+      const deleteTodo = async (id) => {
+        try {
+          // Gọi API --> Xóa trên server
+          await axios.delete(`/todos/${id}`);
+
+          // Lọc ra các cv khác id của công việc muốn xóa
+          todos = todos.filter((todo) => todo.id != id);
+
+          // Hiển thị lại trên giao diện
+          renderTodo(todos);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      // Thay đổi trạng thái công việc
+      const toggleStatus = async (id) => {
+        try {
+          // Lấy ra cv cần thay đổi
+          let todo = todos.find((todo) => todo.id == id);
+
+          // Thay đổi trạng thái của cv đó : true -> false , false -> true
+          todo.status = !todo.status;
+
+          // Gọi API
+          await axios.put(`/todos/${id}`, todo);
+
+          // Hiển thị lên trên giao diện
+          renderTodo(todos);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      // Thêm công việc
+      const addTodo = async () => {
+        try {
+          // Lấy ra dữ liệu trong ô input
+          let title = todoInputEl.value;
+
+          // Kiểm tra xem tiêu đề có trống hay không
+          if (title == "") {
+            alert("Tiêu đề công việc không được để trống");
+            return;
+          }
+
+          // Tạo công việc mới
+          let newTodo = {
+            title: title,
+            status: false,
+          };
+
+          // Gọi API tạo mới
+          let res = await axios.post("/todos", newTodo);
+
+          // Thêm cv mới vào mảng để quản lý
+          todos.push(res.data);
+
+          renderTodo(todos);
+          todoInputEl.value = "";
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      // Thêm công việc bằng nút "THÊM"
+      btnAdd.addEventListener("click", () => {
+        addTodo();
+      });
+
+      // Thêm công việc bằng phím Enter
+      todoInputEl.addEventListener("keydown", (event) => {
+        if (event.keyCode == 13) {
+          addTodo();
+        }
+      });
+
+      getTodos();
+    </script>
+  </body>
+</html>
