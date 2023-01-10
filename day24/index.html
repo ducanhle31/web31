@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog API</title>
+    <style>
+      body {
+        margin-left: 20%;
+        background-color: rgb(227, 243, 243);
+        font-size: 20px;
+      }
+      .form {
+        display: flex;
+      }
+      .result {
+        width: 400px;
+        height: 300px;
+        border: 1px solid rgb(139, 138, 138);
+        overflow: hidden;
+        border-radius: 5px;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Breeds List</h1>
+
+    <div class="form">
+      <select id="breed-list"></select>
+
+      <button id="btn-breed">Get Sub Breed</button>
+    </div>
+
+    <div class="sub-breed hide">
+      <h1>Sub Breeds List</h1>
+
+      <ul></ul>
+    </div>
+
+    <div class="result hide">
+      <img id="image" src="" alt="dog" />
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      const btnGetSubBreed = document.getElementById("btn-breed");
+      const image = document.getElementById("image");
+      const select = document.getElementById("breed-list");
+      const subBreedContainerEl = document.querySelector(".sub-breed");
+      const subBreedEl = document.querySelector(".sub-breed ul");
+      const resultEl = document.querySelector(".result");
+
+      async function getBreedList() {
+        let res = await axios.get("https://dog.ceo/api/breeds/list/all");
+
+        renderBreed(res.data.message);
+      }
+
+      function renderBreed(breeds) {
+        for (const breedName in breeds) {
+          select.insertAdjacentHTML(
+            "beforeend",
+            `<option value=${breedName}>${breedName}</option>`
+          );
+        }
+      }
+
+      btnGetSubBreed.addEventListener("click", function () {
+        let breedName = select.value;
+        getSubBreedList(breedName);
+      });
+
+      async function getSubBreedList(breedName) {
+        let res = await axios.get(
+          `https://dog.ceo/api/breed/${breedName}/list`
+        );
+
+        displaySubBreedList(breedName, res.data.message);
+      }
+
+      function displaySubBreedList(breedName, subBreeds) {
+        subBreedContainerEl.classList.remove("hide");
+        subBreedEl.innerHTML = "";
+
+        if (subBreeds.length == 0) {
+          subBreedEl.innerHTML = "<li>Không có sub breed</li>";
+          return;
+        }
+
+        for (let i = 0; i < subBreeds.length; i++) {
+          subBreedEl.innerHTML += `
+            <li>
+                <a javascript:void(0) href="#" onclick="getRandomImage('${breedName}', '${subBreeds[i]}')">${subBreeds[i]}</a>
+            </li>
+        `;
+        }
+      }
+
+      async function getRandomImage(breedName, subBreedName) {
+        let res = await axios.get(
+          `https://dog.ceo/api/breed/${breedName}/${subBreedName}/images/random`
+        );
+        resultEl.classList.remove("hide");
+        image.src = res.data.message;
+      }
+
+      getBreedList();
+    </script>
+  </body>
+</html>
