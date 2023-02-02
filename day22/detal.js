@@ -1,3 +1,4 @@
+"use strict";
 const getGameDetail = function (id) {
   const options = {
     method: "GET",
