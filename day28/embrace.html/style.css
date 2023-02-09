@@ -175,4 +175,7 @@ flex-grow: 0;
 margin-top: 16px;
 }
     
-
+.swiper {
+  width: 1339px;
+  margin-left: 100px;
+}

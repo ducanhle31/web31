@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Embrace</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -781,244 +784,248 @@
           </div>
         </div>
         <div style="margin-top: 92px">
-          <button style="border-radius: 100%; background: #939393">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-arrow-left"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
-              />
-            </svg>
+          <button
+            class="next border-0"
+            style="
+              width: 67px;
+              margin-left: 450px;
+              height: 67px;
+              border-radius: 100%;
+            "
+          ><img src="./img/le.png" alt="">
           </button>
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-arrow-right"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-              />
-            </svg>
+          <button
+            class="prev border-0"
+            style="
+              width: 67px;
+              margin-left: 34px;
+              background: #3461ff;
+              height: 67px;
+              border-radius: 100%;
+            "
+          ><img src="./img/rig.png" alt="">
           </button>
         </div>
       </div>
       <div class="d-flex">
-        <div
-          class="card"
-          style="
-            display: flex;
-            margin-top: 53px;
-            margin-left: 100px;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 32px 73px 32px 32px;
-            gap: 19px;
-            width: 505px;
-            height: 296px;
-            background: #3461ff;
-            border-radius: 30px;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-          "
-        >
-          <div class="d-flex">
-            <div style="width: 85px; height: 85px">
-              <img src="./img/Ellipse 80.png" alt="" />
-            </div>
-            <div style="margin-left: 20px">
-              <div
-                style="
-                  width: 320px;
-                  height: 38px;
-                  font-weight: 600;
-                  font-size: 28px;
-                  line-height: 38px;
-                  text-transform: capitalize;
-                  color: #ffffff; ;
-                "
-              >
-                Amelia Joseph
+        <div>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div
+                  class="card"
+                  style="
+                    display: flex;
+                    margin-top: 53px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 32px 73px 32px 32px;
+                    gap: 19px;
+                    width: 505px;
+                    height: 296px;
+                    background: #3461ff;
+                    border-radius: 30px;
+                   
+                  "
+                >
+                  <div class="d-flex">
+                    <div style="width: 85px; height: 85px">
+                      <img src="./img/Ellipse 80.png" alt="" />
+                    </div>
+                    <div style="margin-left: 20px">
+                      <div
+                        style="
+                          width: 320px;
+                          height: 38px;
+                          font-weight: 600;
+                          font-size: 28px;
+                          line-height: 38px;
+                          text-transform: capitalize;
+                          color: #ffffff; ;
+                        "
+                      >
+                        Amelia Joseph
+                      </div>
+                      <div
+                        style="
+                          margin-top: 10px;
+                          width: 137px;
+                          height: 27px;
+                          font-weight: 500;
+                          font-size: 20px;
+                          line-height: 27px;
+                          text-transform: capitalize;
+                          color: #ffffff;
+                        "
+                      >
+                        Chief Manager
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      width: 400px;
+                      height: 128px;
+                      font-weight: 400;
+                      font-size: 18px;
+                      line-height: 32px;
+                      text-transform: capitalize;
+                      color: #ffffff;
+                    "
+                  >
+                    Use this section to describe your company and the products
+                    you offer. You could share your company’s story and details
+                    about why you are in business.
+                  </div>
+                </div>
               </div>
-              <div
-                style="
-                  margin-top: 10px;
-                  width: 137px;
-                  height: 27px;
-                  font-weight: 500;
-                  font-size: 20px;
-                  line-height: 27px;
-                  text-transform: capitalize;
-                  color: #ffffff;
-                "
-              >
-                Chief Manager
+              <div class="swiper-slide">
+                <div
+                  class="card"
+                  style="
+                    display: flex;
+                    margin-top: 53px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 32px 73px 32px 32px;
+                    gap: 19px;
+                    width: 505px;
+                    height: 296px;
+                    background: #3461ff;
+                    border-radius: 30px;
+                    
+                  "
+                >
+                  <div class="d-flex">
+                    <div style="width: 85px; height: 85px">
+                      <img src="./img/Ellipse 802.png" alt="" />
+                    </div>
+                    <div style="margin-left: 20px">
+                      <div
+                        style="
+                          width: 320px;
+                          height: 38px;
+                          font-weight: 600;
+                          font-size: 28px;
+                          line-height: 38px;
+                          text-transform: capitalize;
+                          color: #ffffff; ;
+                        "
+                      >
+                        Jacob Joshua
+                      </div>
+                      <div
+                        style="
+                          margin-top: 10px;
+                          width: 137px;
+                          height: 27px;
+                          font-weight: 500;
+                          font-size: 20px;
+                          line-height: 27px;
+                          text-transform: capitalize;
+                          color: #ffffff;
+                        "
+                      >
+                        Chief Manager
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      width: 400px;
+                      height: 128px;
+                      font-weight: 400;
+                      font-size: 18px;
+                      line-height: 32px;
+                      text-transform: capitalize;
+                      color: #ffffff;
+                    "
+                  >
+                    Use this section to describe your company and the products
+                    you offer. You could share your company’s story and details
+                    about why you are in business.
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card"
+                  style="
+                    display: flex;
+                    margin-top: 53px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 32px 73px 32px 32px;
+                    gap: 19px;
+                    width: 505px;
+                    height: 296px;
+                    background: #3461ff;
+                    border-radius: 30px;
+                   
+                  "
+                >
+                  <div class="d-flex">
+                    <div style="width: 85px; height: 85px">
+                      <img src="./img/Ellipse 80 (1).png" alt="" />
+                    </div>
+                    <div style="margin-left: 20px">
+                      <div
+                        style="
+                          width: 320px;
+                          height: 38px;
+                          font-weight: 600;
+                          font-size: 28px;
+                          line-height: 38px;
+                          text-transform: capitalize;
+                          color: #ffffff; ;
+                        "
+                      >
+                        Jacob Joshua
+                      </div>
+                      <div
+                        style="
+                          margin-top: 10px;
+                          width: 137px;
+                          height: 27px;
+                          font-weight: 500;
+                          font-size: 20px;
+                          line-height: 27px;
+                          text-transform: capitalize;
+                          color: #ffffff;
+                        "
+                      >
+                        Chief Manager
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      width: 400px;
+                      height: 128px;
+                      font-weight: 400;
+                      font-size: 18px;
+                      line-height: 32px;
+                      text-transform: capitalize;
+                      color: #ffffff;
+                    "
+                  >
+                    Use this section to describe your company and the products
+                    you offer. You could share your company’s story and details
+                    about why you are in business.
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            style="
-              width: 400px;
-              height: 128px;
-              font-weight: 400;
-              font-size: 18px;
-              line-height: 32px;
-              text-transform: capitalize;
-              color: #ffffff;
-            "
-          >
-            Use this section to describe your company and the products you
-            offer. You could share your company’s story and details about why
-            you are in business.
-          </div>
-        </div>
-        <div
-          class="card"
-          style="
-            display: flex;
-            margin-top: 53px;
-            margin-left: 20px;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 32px 73px 32px 32px;
-            gap: 19px;
-            width: 505px;
-            height: 296px;
-            background: #3461ff;
-            border-radius: 30px;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-          "
-        >
-          <div class="d-flex">
-            <div style="width: 85px; height: 85px">
-              <img src="./img/Ellipse 802.png" alt="" />
-            </div>
-            <div style="margin-left: 20px">
-              <div
-                style="
-                  width: 320px;
-                  height: 38px;
-                  font-weight: 600;
-                  font-size: 28px;
-                  line-height: 38px;
-                  text-transform: capitalize;
-                  color: #ffffff; ;
-                "
-              >
-                Jacob Joshua
-              </div>
-              <div
-                style="
-                  margin-top: 10px;
-                  width: 137px;
-                  height: 27px;
-                  font-weight: 500;
-                  font-size: 20px;
-                  line-height: 27px;
-                  text-transform: capitalize;
-                  color: #ffffff;
-                "
-              >
-                Chief Manager
-              </div>
-            </div>
-          </div>
-          <div
-            style="
-              width: 400px;
-              height: 128px;
-              font-weight: 400;
-              font-size: 18px;
-              line-height: 32px;
-              text-transform: capitalize;
-              color: #ffffff;
-            "
-          >
-            Use this section to describe your company and the products you
-            offer. You could share your company’s story and details about why
-            you are in business.
-          </div>
-        </div>
-        <div
-          class="card"
-          style="
-            display: flex;
-            margin-top: 53px;
-            margin-left: 20px;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 32px 73px 32px 32px;
-            gap: 19px;
-            width: 505px;
-            height: 296px;
-            background: #3461ff;
-            border-radius: 30px;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-          "
-        >
-          <div class="d-flex">
-            <div style="width: 85px; height: 85px">
-              <img src="./img/Ellipse 80 (1).png" alt="" />
-            </div>
-            <div style="margin-left: 20px">
-              <div
-                style="
-                  width: 320px;
-                  height: 38px;
-                  font-weight: 600;
-                  font-size: 28px;
-                  line-height: 38px;
-                  text-transform: capitalize;
-                  color: #ffffff; ;
-                "
-              >
-                Jacob Joshua
-              </div>
-              <div
-                style="
-                  margin-top: 10px;
-                  width: 137px;
-                  height: 27px;
-                  font-weight: 500;
-                  font-size: 20px;
-                  line-height: 27px;
-                  text-transform: capitalize;
-                  color: #ffffff;
-                "
-              >
-                Chief Manager
-              </div>
-            </div>
-          </div>
-          <div
-            style="
-              width: 400px;
-              height: 128px;
-              font-weight: 400;
-              font-size: 18px;
-              line-height: 32px;
-              text-transform: capitalize;
-              color: #ffffff;
-            "
-          >
-            Use this section to describe your company and the products you
-            offer. You could share your company’s story and details about why
-            you are in business.
+            <!-- If we need pagination -->
+            <!--  <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+
+            <!-- If we need scrollbar -->
+            <!--  <div class="swiper-scrollbar"></div> -->
           </div>
         </div>
       </div>
@@ -1309,38 +1316,63 @@
         </div>
       </div>
     </div>
-    <div class="bottom d-flex" style="width: 1440px;
-height: 392px; margin-left: 100px;margin-top: 142px;">
-      <div> 
-       <div class="d-flex"> <div style=""><img src="./img/Group 2185.png" alt=""></div>
-      <div style="width: 140px;
-height: 42px;
-left: 150.62px;
-top: 62px;
-font-family: 'Helvetica';
-font-style: normal;
-font-weight: 700;
-font-size: 36.5629px;
-line-height: 42px;
-letter-spacing: -2.58987px;
-text-transform: capitalize;
-color: #000000;
-" >Embrace</div></div>
-        <div style="width: 210px; margin-top: 19px;
-height: 20px;
-left: 102px;
-top: 123px;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-color: #000000;
-">Los Angeles, California, USA</div>
-        <div class="d-flex" style="margin-top: 34px;"> 
-<div><img src="./img/ri_instagram-fill.png" alt=""></div>
-<div style="margin-left: 16px;"><img src="./img/bi_twitter.png" alt=""></div>
-<div style="margin-left: 16px;"><img src="./img/ic_baseline-facebook.png" alt=""></div>
+    <div
+      class="bottom d-flex"
+      style="
+        width: 1440px;
+        height: 392px;
+        margin-left: 100px;
+        margin-top: 142px;
+      "
+    >
+      <div>
+        <div class="d-flex">
+          <div style=""><img src="./img/Group 2185.png" alt="" /></div>
+          <div
+            style="
+              width: 140px;
+              height: 42px;
+              left: 150.62px;
+              top: 62px;
+              font-family: 'Helvetica';
+              font-style: normal;
+              font-weight: 700;
+              font-size: 36.5629px;
+              line-height: 42px;
+              letter-spacing: -2.58987px;
+              text-transform: capitalize;
+              color: #000000;
+            "
+          >
+            Embrace
+          </div>
         </div>
-        <div style="margin-top: 41px;"> <button
+        <div
+          style="
+            width: 210px;
+            margin-top: 19px;
+            height: 20px;
+            left: 102px;
+            top: 123px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+          "
+        >
+          Los Angeles, California, USA
+        </div>
+        <div class="d-flex" style="margin-top: 34px">
+          <div><img src="./img/ri_instagram-fill.png" alt="" /></div>
+          <div style="margin-left: 16px">
+            <img src="./img/bi_twitter.png" alt="" />
+          </div>
+          <div style="margin-left: 16px">
+            <img src="./img/ic_baseline-facebook.png" alt="" />
+          </div>
+        </div>
+        <div style="margin-top: 41px">
+          <button
             type="button"
             class="btn btn-primary"
             style="
@@ -1351,71 +1383,113 @@ color: #000000;
               font-size: 24px;
               line-height: 32px;
               font-weight: 500;
-              
             "
           >
-           Contact Us
-          </button></div>
+            Contact Us
+          </button>
+        </div>
       </div>
-      <div class="" style="margin-left: 338px; font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-color: #000000;margin-top: 26px;
-">
-        <div >Work With Us</div>
-        <div style="margin-top: 48px;">Advertise With Us</div>
-        <div style="margin-top: 48px;">Support Us</div>
-        <div style="margin-top: 48px;">Business Advices</div>
+      <div
+        class=""
+        style="
+          margin-left: 338px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #000000;
+          margin-top: 26px;
+        "
+      >
+        <div>Work With Us</div>
+        <div style="margin-top: 48px">Advertise With Us</div>
+        <div style="margin-top: 48px">Support Us</div>
+        <div style="margin-top: 48px">Business Advices</div>
       </div>
-       <div class="" style="margin-left: 75px; font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-color: #000000;margin-top: 26px;
-">
-        <div >Private Coaching</div>
-        <div style="margin-top: 48px;">Our Work</div>
-        <div style="margin-top: 48px;">Our Commitment</div>
-        <div style="margin-top: 48px;">Our Team</div>
+      <div
+        class=""
+        style="
+          margin-left: 75px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #000000;
+          margin-top: 26px;
+        "
+      >
+        <div>Private Coaching</div>
+        <div style="margin-top: 48px">Our Work</div>
+        <div style="margin-top: 48px">Our Commitment</div>
+        <div style="margin-top: 48px">Our Team</div>
       </div>
-       <div class="" style="margin-left: 75px; font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-color: #000000;margin-top: 26px;
-">
-        <div >About Us</div>
-        <div style="margin-top: 48px;">FAQs</div>
-        <div style="margin-top: 48px;">Report a Bug</div>
+      <div
+        class=""
+        style="
+          margin-left: 75px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #000000;
+          margin-top: 26px;
+        "
+      >
+        <div>About Us</div>
+        <div style="margin-top: 48px">FAQs</div>
+        <div style="margin-top: 48px">Report a Bug</div>
       </div>
-    
     </div>
     <footer>
-      <div class="d-flex" style="margin-top: -62px;
-height: 119px;  background-color: #000000;">
-<div style="margin-left: 100px;width: 272px;
-height: 20px;
-left: 100px;
-margin-top: 50px;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-color: #FFFFFF;
-">© 2022 Embrace, Inc. - All Rights Reserved</div>
-<div style="width: 84px;margin-left: 671px;margin-top: 50px;
-height: 20px;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-color: #FFFFFF;
-">Terms of use   </div>
-<div style="margin-left: 125px;margin-top: 50px;width: 88px;
-height: 20px;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-color: #FFFFFF;
-">  Privacy policy </div>
-</div>
+      <div
+        class="d-flex"
+        style="margin-top: -62px; height: 119px; background-color: #000000"
+      >
+        <div
+          style="
+            margin-left: 100px;
+            width: 272px;
+            height: 20px;
+            left: 100px;
+            margin-top: 50px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #ffffff;
+          "
+        >
+          © 2022 Embrace, Inc. - All Rights Reserved
+        </div>
+        <div
+          style="
+            width: 84px;
+            margin-left: 671px;
+            margin-top: 50px;
+            height: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #ffffff;
+          "
+        >
+          Terms of use
+        </div>
+        <div
+          style="
+            margin-left: 125px;
+            margin-top: 50px;
+            width: 88px;
+            height: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #ffffff;
+          "
+        >
+          Privacy policy
+        </div>
+      </div>
     </footer>
+
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./slide.js"></script>
   </body>
 </html>
