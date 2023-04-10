@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organica - Non-starchy vegetables.</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./organic.png" type="image/x-icon" />
+
+    <!-- 
+    - custom css link
+  -->
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/product-details.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="nav-wrapper">
+        <div class="container">
+          <h1 class="h1">
+            <a href="./index.html" class="logo"
+              >Orga<span class="span">nic</span></a
+            >
+          </h1>
+
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+          <nav class="navbar" data-navbar>
+            <button
+              class="nav-close-btn"
+              aria-label="Close Menu"
+              data-nav-close-btn
+            >
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <ul class="navbar-list">
+              <li>
+                <a href="./index.html" class="navbar-link">Trang chủ</a>
+              </li>
+              <li>
+                <a href="./shop.html" class="navbar-link">Sản phẩm</a>
+              </li>
+              <li>
+                <a href="./about.html" class="navbar-link">Giới thiệu</a>
+              </li>
+
+              <li>
+                <a href="./blog.html" class="navbar-link">Tin tức</a>
+              </li>
+
+              <li>
+                <a href="./contact.html" class="navbar-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-action">
+            <div class="search-wrapper" data-search-wrapper>
+              <button
+                class="header-action-btn"
+                aria-label="Toggle search"
+                data-search-btn
+              >
+                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                <ion-icon name="close-outline" class="close-icon"></ion-icon>
+              </button>
+
+              <div class="input-wrapper">
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Search here"
+                  class="search-input"
+                />
+
+                <button class="search-submit" aria-label="Submit search">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <label for="show1" class="show-btn1 header-action-btn">
+              <ion-icon name="person-outline"></ion-icon
+            ></label>
+            <div class="cart_items">
+              <button
+                class="header-action-btn cart__counter"
+                aria-label="Open shopping cart"
+                data-panel-btn="cart"
+              >
+                <ion-icon id="cart" name="basket-outline"></ion-icon>
+                <span class="btn-badge cart-quantity" id="total__counter"
+                  >0</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 
+    - #ASIDE
+  -->
+
+    <aside class="aside">
+      <div class="center1">
+        <input type="checkbox" id="show1" />
+
+        <div class="container1">
+          <label for="show1" class="close-btn1" title="close"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              /></svg
+          ></label>
+          <div class="text1">Đăng nhập</div>
+          <form action="#">
+            <div class="data1">
+              <input type="text" placeholder="Nhập Email" required />
+            </div>
+            <div class="data1">
+              <input type="password" placeholder="Nhập mật khẩu" required />
+            </div>
+            <div class="forgot-pass1">
+              <a href="#">Quên mật khẩu?</a>
+            </div>
+            <div class="btn1">
+              <div class="inner1"></div>
+              <button type="submit1">Đăng nhập</button>
+            </div>
+            <div class="signup-link1">
+              Bạn không phải là một thành viên? <a href="#">Đăng ký</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="side-panel cart" data-side-panel="cart">
+        <button
+          class="panel-close-btn"
+          aria-label="Close cart"
+          data-panel-btn="cart"
+        >
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <ul class="panel-list cart__items"></ul>
+
+        <div class="subtotal">
+          <p class="subtotal-text">Tổng cộng:</p>
+
+          <data class="subtotal-value total__cost">0 VND</data>
+        </div>
+
+        <a href="./cart.html" class="panel-btn check_out_btn">Thanh toán</a>
+      </div>
+    </aside>
+
+    <main>
+      <article>
+        <!-- 
+        - #BREADCUMB
+      -->
+
+        <div class="breadcumb">
+          <h1>Chanh tươi</h1>
+          <p><a href="./index.html">Trang chủ >></a> Chanh tươi</p>
+        </div>
+
+        <!-- 
+        - #PRODUCT DETAILS
+      -->
+
+        <section class="section product-details">
+          <div class="container">
+            <div class="wrapper">
+              <div class="product-details-img">
+                <figure class="product-display">
+                  <img
+                    src="./assets/images/10.webp"
+                    oading="lazy"
+                    alt="Non-starchy vegetables."
+                    data-product-display
+                    alt=""
+                  />
+                </figure>
+
+                <ul class="product-thumbnail-list has-scrollbar">
+                  <li class="product-thumbnail-item">
+                    <img
+                      src="./assets/images/10.webp"
+                      loading="lazy"
+                      width="100px"
+                      height="100px"
+                      alt="Non-starchy vegetables."
+                      data-product-thumbnail
+                    />
+                  </li>
+
+                  <li class="product-thumbnail-item">
+                    <img
+                      src="./assets/images/11.webp"
+                      loading="lazy"
+                      width="100px"
+                      height="100px"
+                      alt="Non-starchy vegetables."
+                      data-product-thumbnail
+                    />
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product-details-content">
+                <h3 class="product-title">Chanh tươi</h3>
+                <div class="price-wrapper">
+                  <data
+                    class="price product-price"
+                    style="color: #ff0000"
+                    value="25.00"
+                    >25.000đ</data
+                  >
+
+                  <del class="del"> 35.000đ</del>
+                </div>
+
+                <p>&nbsp</p>
+                <p>Nguồn gốc: Việt Nam</p>
+                <p>&nbsp</p>
+
+                <p class="product-text">
+                  Các chuyên gia dinh dưỡng khuyên rằng mỗi ngày bạn hãy uống 1
+                  ly nước chanh tươi ấm pha với mật ong để không ngừng nâng cao
+                  sức đề kháng, tăng cường hệ thống miễn dịch và bảo vệ sức
+                  khỏe.
+                </p>
+
+                <div class="product-weight-wrapper">
+                  <p class="product-weight-title">Khối lượng :</p>
+
+                  <ul class="product-weight-list">
+                    <li class="product-weight-item">
+                      <input
+                        type="radio"
+                        name="weight"
+                        id="weight-1"
+                        class="product-weight-radio"
+                      />
+
+                      <label for="weight-1" class="product-weight-label"
+                        >0.5kg</label
+                      >
+                    </li>
+
+                    <li class="product-weight-item">
+                      <input
+                        type="radio"
+                        name="weight"
+                        id="weight-2"
+                        class="product-weight-radio"
+                      />
+
+                      <label for="weight-2" class="product-weight-label"
+                        >1kg</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="product-qty">
+                  <input
+                    type="number"
+                    name="quantity"
+                    value="1"
+                    min="1"
+                    max="50"
+                    class="product-qty-input"
+                  />
+
+                  <button class="btn btn-primary product-qty-btn">
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="description-title">Mô tả :</h4>
+
+            <p class="description-text">
+              Với tính năng đa tác dụng và hiệu quả vượt trội trong cuộc sống
+              hàng ngày, chanh tươi từ lâu đã trở thành thực phẩm quen thuộc
+              trong tủ lạnh nhiều gia đình. Bên cạnh khả năng góp phần giúp chị
+              em làm đẹp, phát huy công dụng trong nhà bếp, vệ sinh nhà cửa,
+              chanh tươi còn có rất nhiều lợi ích đối với sức khỏe mà không phải
+              ai cũng biết.
+            </p>
+            <p class="description-text">
+              Các chuyên gia dinh dưỡng khuyên rằng mỗi ngày bạn hãy uống 1 ly
+              nước chanh tươi ấm pha với mật ong để không ngừng nâng cao sức đề
+              kháng, tăng cường hệ thống miễn dịch và bảo vệ sức khỏe vì trong
+              chanh tươi có chứa rất nhiều kali giúp kích thích hoạt động bộ
+              não, đảm bảo hoạt động của hệ thần kinh, huyết áp ổn định, tăng
+              cường chức năng tiêu hóa, phát huy khả năng thanh lọc cơ thể của
+              thận đẻ bài trừ độc tố, không những thế nguồn vitamin C dồi dào
+              trong chanh tươi còn là thành phần không thế thiếu giúp bạn nâng
+              cao sức đề kháng mỗi ngày nữa đấy.
+            </p>
+          </div>
+        </section>
+
+        <section class="section top-product">
+          <div class="container">
+            <h2 class="h2 section-title">SẢN PHẨM LIÊN QUAN</h2>
+            <center style="margin-bottom: 25px; margin-top: -25px">
+              <img src="./assets/images/back-ground/bg_title.png" alt="" />
+            </center>
+            <!-- Swiper -->
+
+            <div class="swiper my-Swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-card top-product-card">
+                    <input
+                      type="hidden"
+                      id="product__id"
+                      value="${product.id}"
+                    />
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/hoaqua/cam.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Orangey"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Cam Navel ruột vàng</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">125.000 VND</del>
+
+                        <data class="price" value="85.00">85.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                  <div class="product-card top-product-card">
+                    <input
+                      type="hidden"
+                      id="product__id"
+                      value="${product.id}"
+                    />
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/hoaqua/le-xanh.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Orangey"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Lê xanh</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">155.000 VND</del>
+
+                        <data class="price" value="85.00">95.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card top-product-card">
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/raucu/chanh.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="key Lime"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Chanh tươi</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">100.000 VND</del>
+
+                        <data class="price" value="85.00">55.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                  <div class="product-card top-product-card">
+                    <input
+                      type="hidden"
+                      id="product__id"
+                      value="${product.id}"
+                    />
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/haisan/ca-hoi.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Orangey"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Cá hồi </a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">325.000 VND</del>
+
+                        <data class="price" value="85.00">285.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card top-product-card">
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/raucu/rau-cai.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Watermelon"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Rau cải</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">35.000 VND</del>
+
+                        <data class="price" value="85.00">20.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+
+                  <div class="product-card top-product-card">
+                    <input
+                      type="hidden"
+                      id="product__id"
+                      value="${product.id}"
+                    />
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/tuoisong/suon-lon-brazil.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Orangey"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Sườn lợn bra-zil</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">225.000 VND</del>
+
+                        <data class="price" value="85.00">185.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card top-product-card">
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/cacloaihat/hanh-nhan.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Lens Results Spinach"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Hạnh nhân</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">350.000 VND</del>
+
+                        <data class="price" value="85.00">290.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                  <div class="product-card top-product-card">
+                    <input
+                      type="hidden"
+                      id="product__id"
+                      value="${product.id}"
+                    />
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/raucu/tomato.png"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Orangey"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Cà chua</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">25.000 VND</del>
+
+                        <data class="price" value="85.00">15.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card top-product-card">
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/hoaqua/tao.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Lorigun Artificial"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Táo xanh</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">220.000 VND</del>
+
+                        <data class="price" value="85.00">185.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                  <div class="product-card top-product-card">
+                    <input
+                      type="hidden"
+                      id="product__id"
+                      value="${product.id}"
+                    />
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/tuoisong/thit-bo-canada.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Orangey"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Thịt bò Canada</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">350.000 VND</del>
+
+                        <data class="price" value="85.00">250.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card top-product-card">
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/hoaqua/vai-thieu.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Leaf lettuce"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Vải thiều</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">100.000 VND</del>
+
+                        <data class="price" value="85.00">75.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+
+                  <div class="product-card top-product-card">
+                    <input
+                      type="hidden"
+                      id="product__id"
+                      value="${product.id}"
+                    />
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/products/haisan/cua-be.webp"
+                        width="100"
+                        height="100"
+                        loading="lazy"
+                        alt="Fresh Orangey"
+                      />
+
+                      <div class="btn-wrapper">
+                        <button class="product-btn" aria-label="Quick View">
+                          <a href="./product-details.html">
+                            <ion-icon name="eye-outline"></ion-icon
+                          ></a>
+                        </button>
+                      </div>
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="rating-wrapper">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <h3 class="h4 card-title">
+                        <a href="./product-details.html">Cua biển</a>
+                      </h3>
+
+                      <div class="price-wrapper">
+                        <del class="del">375.000 VND</del>
+
+                        <data class="price" value="85.00">285.000 VND</data>
+                      </div>
+
+                      <button class="btn btn-primary">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #NEWSLETTER
+      -->
+
+        <section class="section newsletter">
+          <div class="container">
+            <div class="newsletter-card">
+              <p class="section-subtitle">-- Theo dõi chúng tôi --</p>
+
+              <h2 class="h2 section-title">
+                Đăng kí nhận tin <span class="span">khuyến mãi 20% .</span>
+              </h2>
+
+              <form action="" class="newsletter-form">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Nhập Email "
+                  required
+                  class="input-email"
+                />
+
+                <button type="submit" class="btn btn-primary">
+                  <span>Đăng ký</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <a class="totop" href="#">
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </a>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="./index.html" class="logo"
+              >Orga<span class="span">nic</span></a
+            >
+
+            <p class="footer-text">
+              Organic chuyên cung cấp những sản phẩm được kiểm soát chặt chẽ từ
+              khâu con giống, chế biến thức ăn, chăm sóc sức khỏe vật nuôi đến
+              giết mổ, bao gói, bảo quản và vận chuyển một cách tốt nhất, sạch
+              nhất cho thị trường.
+            </p>
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <img
+                    src="./assets/images/btn/user-1.svg"
+                    width="30px"
+                    height="30px"
+                    alt=""
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <img
+                    src="./assets/images/btn/user-2.svg"
+                    width="30px"
+                    height="30px"
+                    alt=""
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <img
+                    src="./assets/images/btn/user-3.svg"
+                    width="30px"
+                    height="30px"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Liên kết</p>
+            </li>
+
+            <li>
+              <a href="./about.html" class="footer-link">Giới thiệu</a>
+            </li>
+
+            <li>
+              <a href="./shop.html" class="footer-link">Sản phẩm</a>
+            </li>
+
+            <li>
+              <a href="./blog.html" class="footer-link">Tin tức</a>
+            </li>
+
+            <li>
+              <a href="./contact.html" class="footer-link">Liên hệ</a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Liên hệ</p>
+            </li>
+
+            <li class="footer-item">
+              <div class="contact-icon">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <address class="contact-link">
+                Thụy Phương, Bắc TỪ Liêm, HN.
+              </address>
+            </li>
+
+            <li class="footer-item">
+              <div class="contact-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <a href="tel:+1800123456789" class="contact-link">034 444 9999</a>
+            </li>
+
+            <li class="footer-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <a href="mailto:organica@help.com" class="contact-link"
+                >organic.com</a
+              >
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Bản tin</p>
+
+            <p class="newsletter-text">
+              Bạn sẽ nhận được thông báo khi có tin mới.
+            </p>
+
+            <form action="" class="footer-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Địa chỉ Email *"
+                required
+                class="footer-input"
+              />
+
+              <button type="submit" class="footer-form-btn" aria-label="Submit">
+                <ion-icon name="mail-outline"></ion-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2023 <a href="#" class="copyright-link">organic</a>
+          </p>
+
+          <ul class="footer-bottom-list">
+            <li>
+              <a href="#" class="footer-bottom-link">Chính sách bảo mật</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/product-details.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

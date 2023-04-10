@@ -1,0 +1,265 @@
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.col-40 {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-60 {
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+}
+
+.col-40,
+.col-50,
+.col-60 {
+  padding: 0 16px;
+}
+
+.checkout {
+  background-color: #ffffff;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;margin-bottom: 80px;
+}
+
+.checkout h6{
+      font-size: 2.5rem;
+      margin-top: 15px;
+    padding-bottom: 1rem;
+    color: rgb(34, 34, 34);
+}
+
+input[type="text"],
+input[type="tel"] {
+ 
+   padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    color: #222;
+    text-transform: none;
+    margin: .7rem 0;
+}
+
+input[type="number"] {
+ 
+  padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    color: #222;
+    text-transform: none;
+    margin: .7rem 0;
+}
+
+#city,
+#districts,
+#wards {
+  width: 100%;
+}
+
+#districts,
+#wards {
+  display: none;
+}
+
+ textarea {
+ 
+
+  margin-bottom: 10px;
+
+
+      width: 100%;
+    height: 15rem;
+    resize: none;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+   
+    color: #222 ;
+    text-transform: none;
+    margin: .7rem 0;
+
+}
+
+ textarea:focus {
+ border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+ .user_info .form-group {
+  margin-bottom: 10px;
+
+}
+
+ .user_info select {
+  margin-bottom: 10px;
+  padding: 5px;
+
+}
+
+.form-message{ color: red;}
+
+/*  */
+
+.pay__heading {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  border-bottom: 1px solid grey;
+  text-align: center;
+
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+margin-top: 15px;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    color: rgb(34, 34, 34);
+}
+
+.pay__calc { 
+  padding-bottom: 2rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: 2rem;
+  height: 4.3rem;
+  overflow: hidden;
+  
+  
+}
+
+.pay__calc--active{
+  height: auto;
+  border-bottom: 1px solid grey;
+}
+
+.pay__calc p{display: flex; }
+.pay__calc p span{ padding-left: 10px;}
+
+
+.pay__title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  height: 4.2rem;
+ 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2.7rem;
+  position: relative;
+}
+
+
+
+.pay__item,
+.pay__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.pay__item  {
+  margin-bottom: 15px;
+}
+
+.product-qty{ display: flex; align-items: center;;}
+.product-qty button{ margin: 0 10px;}
+.pay__item .price{ display: flex; color: red;}
+
+.total span{ display: flex; color: red; margin-left: 15px;}
+.pay__total {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+
+.product-qty span {
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #333;
+  background-color: transparent;
+  color: #333;
+}
+
+.product-qty button {  
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  border: 1px solid #333;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay__method {
+  margin-bottom: 2.4rem;
+  border-bottom: 0px solid grey;
+  height: 4.3rem;
+  overflow: hidden;
+}
+
+.pay__method--active{
+  height: auto;
+  border-bottom: 1px solid grey;
+
+}
+
+.pay__group { 
+  padding-bottom: 2.2rem; display: flex ;
+}
+.pay__group input{ width: auto; margin-right: 10px;}
+
+
+
+.pay__paynow {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  height: 4.2rem;
+
+ 
+
+      background-color:#05c26a
+;
+    color:white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    padding: var(--padding, 15px 20px);
+    border-radius: 50px;
+  
+
+}
+
+.pay__paynow:hover {
+  background-color:#049a54;
+}
+
+
+@media (max-width: 600px) {
+ 
+  .col-40 {
+    flex-direction: column-reverse;
+  }
+}

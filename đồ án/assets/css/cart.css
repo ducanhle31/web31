@@ -1,0 +1,78 @@
+.cart__head{ margin-bottom: 10px;}
+.cart__item { display: flex; align-items: center; justify-content: space-between;  padding: 10px;
+
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #333;}
+
+
+
+
+.cart .cart__body .cart__item span {
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #333;
+  background-color: transparent;
+  color: #333;
+}
+
+.cart .cart__body .cart__item button {  
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  border: 1px solid #333;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close_item{ margin-left: 5px;  font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  border: 1px solid #333;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.check  span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #ff0000;
+margin-left: 10px;
+
+}
+.total-price-item{ color: #ff0000; margin-left: 10px;}
+ .cart__footer{ margin-top: 20px;}
+.cart .cart__footer .shopping .btn:hover{
+    background-color: #049a54;
+    color: white;
+}
+.cart .cart__footer .shopping a:first-child {
+  background-color: #ebebeb;
+  color: black;margin-right: 30px;
+}
+.cart .cart__footer .check{ display: flex; align-items: center;}
+.shopping{ display: flex;}
+
+
+.price{ color: #ff0000;}
+.item{ display: flex; align-items: center;}
+ .box-number{ display: flex; align-items: center;}
+.box-number span{ width: 30px; margin: 0 10px;}
+
+.total-price{
+  display: flex; align-items: center; 
+}
+.title_item{
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 500px){
+  .title_item{display: none;}
+  .total-price{ flex-direction: column;}
+}

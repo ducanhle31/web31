@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organic</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./organic.png" type="image/x-icon" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/shop.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+    <header class="header" data-header>
+      <div class="nav-wrapper">
+        <div class="container">
+          <h1 class="h1">
+            <a href="./index.html" class="logo"
+              >Orga<span class="span">nic</span></a
+            >
+          </h1>
+
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+          <nav class="navbar" data-navbar>
+            <button
+              class="nav-close-btn"
+              aria-label="Close Menu"
+              data-nav-close-btn
+            >
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <ul class="navbar-list">
+              <li>
+                <a href="./index.html" class="navbar-link">Trang chủ</a>
+              </li>
+              <li>
+                <a href="./shop.html" class="navbar-link">Sản phẩm</a>
+              </li>
+              <li>
+                <a href="./about.html" class="navbar-link">Giới thiệu</a>
+              </li>
+
+              <li>
+                <a href="./blog.html" class="navbar-link">Tin tức</a>
+              </li>
+
+              <li>
+                <a href="./contact.html" class="navbar-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-action">
+            <div class="search-wrapper" data-search-wrapper>
+              <button
+                class="header-action-btn"
+                aria-label="Toggle search"
+                data-search-btn
+              >
+                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                <ion-icon name="close-outline" class="close-icon"></ion-icon>
+              </button>
+
+              <div class="input-wrapper">
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Search here"
+                  class="search-input"
+                />
+
+                <button class="search-submit" aria-label="Submit search">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <label for="show1" class="show-btn1 header-action-btn">
+              <ion-icon name="person-outline"></ion-icon
+            ></label>
+            <div class="cart_items">
+              <button
+                class="header-action-btn cart__counter"
+                aria-label="Open shopping cart"
+                data-panel-btn="cart"
+              >
+                <ion-icon id="cart" name="basket-outline"></ion-icon>
+                <span class="btn-badge cart-quantity" id="total__counter"
+                  >0</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 
+    - #ASIDE
+  -->
+
+    <aside class="aside">
+      <div class="center1">
+        <input type="checkbox" id="show1" />
+
+        <div class="container1">
+          <label for="show1" class="close-btn1" title="close"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              /></svg
+          ></label>
+          <div class="text1">Đăng nhập</div>
+          <form action="#">
+            <div class="data1">
+              <input type="text" placeholder="Nhập Email" required />
+            </div>
+            <div class="data1">
+              <input type="password" placeholder="Nhập mật khẩu" required />
+            </div>
+            <div class="forgot-pass1">
+              <a href="#">Quên mật khẩu?</a>
+            </div>
+            <div class="btn1">
+              <div class="inner1"></div>
+              <button type="submit1">Đăng nhập</button>
+            </div>
+            <div class="signup-link1">
+              Bạn không phải là một thành viên? <a href="#">Đăng ký</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="side-panel cart" data-side-panel="cart">
+        <button
+          class="panel-close-btn"
+          aria-label="Close cart"
+          data-panel-btn="cart"
+        >
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <ul class="panel-list cart__items"></ul>
+
+        <div class="subtotal">
+          <p class="subtotal-text">Tổng cộng:</p>
+
+          <data class="subtotal-value total__cost">0 VND</data>
+        </div>
+        <a href="" class="check_out_btn"></a>
+        <a href="./cart.html" class="panel-btn">Thanh toán</a>
+      </div>
+    </aside>
+    <main>
+      <article>
+        <!-- 
+        - #BREADCUMB
+      -->
+        <div class="breadcumb">
+          <h1>Sản phẩm</h1>
+          <p><a href="./index.html">Trang chủ >></a>Sản phẩm</p>
+        </div>
+
+        <!-- 
+        - #PRODUCT
+      -->
+
+        <section class="section product">
+          <div class="container col-container">
+            <div class="filters-left">
+              <div class="filters-left-top">
+                <h4 style="display: flex">
+                  <ion-icon name="funnel-outline"></ion-icon> &nbsp Bộ lọc
+                </h4>
+                <button id="reset-checkboxes-button">Bỏ lọc</button>
+              </div>
+              <div class="filters">
+                <h4>Danh mục</h4>
+                <label class="containerr"
+                  >Rau củ
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="raucu"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="containerr"
+                  >Hoa quả
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="hoaqua"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="containerr"
+                  >Các loại hạt
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="hat"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="containerr"
+                  >Hải sản
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="haisan"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="containerr"
+                  >Thực phẩm tươi sống
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="thit"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="filters">
+                <h4>Trạng thái</h4>
+
+                <label class="containerr"
+                  >Mới về
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="new"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="containerr"
+                  >Nổi bật
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="noibat"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="containerr"
+                  >Đang giảm giá
+                  <input
+                    type="checkbox"
+                    name="categoryFilter"
+                    class="filter-checkbox"
+                    value="sale"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="container-right">
+              <div class="price_sort">
+                <label for="price">Sắp xếp:</label>
+                <select name="price" id="price">
+                  <option value="default">Mặc định</option>
+                  <option value="increase">Giá tăng dần</option>
+                  <option value="decrease">Giá giảm dần</option>
+                  <option value="starup">Xếp hạng cao</option>
+                  <option value="stardown">Xếp hạng thấp</option>
+                </select>
+              </div>
+              <div class="grid-list list-product products" id="root">
+                <!--  <div class="product-card" >
+                <figure class="card-banner">
+                  <img
+                    src="./assets/images/products/hoaqua/cam.webp"
+                    width="189"
+                    height="189"
+                    loading="lazy"
+                    alt="Fresh Orangey"
+                  />
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Quick View" >
+                     
+                      <a href="./product-details.html" > <ion-icon name="eye-outline"></ion-icon></a>
+
+                    </button>
+                  </div>
+                </figure>
+
+              
+                
+
+                <h3 class="h4 card-title">
+                  <a href="./product-details.html">Cam Navel ruột vàng</a>
+                </h3>
+
+                <div class="price-wrapper">
+                  <del class="del">$95.00</del>
+
+                  <data class="price" value="85.00">$85.00</data>
+                </div>
+
+                <button class="btn btn-primary">Thêm vào giỏ</button>
+              </div>  -->
+              </div>
+
+              <div class="pagination"></div>
+            </div>
+          </div>
+        </section>
+
+        <!--  -->
+        <section class="section partner">
+          <div class="container">
+            <h2 class="h2 section-title">Đối tác của chúng tôi</h2>
+
+            <div class="swiper parter-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <li class="partner-item">
+                    <figure class="partner-logo">
+                      <img
+                        src="./assets/images/partner-1.png"
+                        width="132"
+                        height="134"
+                        loading="lazy"
+                        alt="Partner logo"
+                      />
+                    </figure>
+                  </li>
+                </div>
+                <div class="swiper-slide">
+                  <li class="partner-item">
+                    <figure class="partner-logo">
+                      <img
+                        src="./assets/images/partner-2.png"
+                        width="132"
+                        height="134"
+                        loading="lazy"
+                        alt="Partner logo"
+                      />
+                    </figure>
+                  </li>
+                </div>
+                <div class="swiper-slide">
+                  <li class="partner-item">
+                    <figure class="partner-logo">
+                      <img
+                        src="./assets/images/partner-3.png"
+                        width="132"
+                        height="134"
+                        loading="lazy"
+                        alt="Partner logo"
+                      />
+                    </figure>
+                  </li>
+                </div>
+                <div class="swiper-slide">
+                  <li class="partner-item">
+                    <figure class="partner-logo">
+                      <img
+                        src="./assets/images/partner-4.png"
+                        width="132"
+                        height="134"
+                        loading="lazy"
+                        alt="Partner logo"
+                      />
+                    </figure>
+                  </li>
+                </div>
+                <div class="swiper-slide">
+                  <li class="partner-item">
+                    <figure class="partner-logo">
+                      <img
+                        src="./assets/images/partner-5.png"
+                        width="132"
+                        height="134"
+                        loading="lazy"
+                        alt="Partner logo"
+                      />
+                    </figure>
+                  </li>
+                </div>
+                <div class="swiper-slide">
+                  <li class="partner-item">
+                    <figure class="partner-logo">
+                      <img
+                        src="./assets/images/partner-6.png"
+                        width="132"
+                        height="134"
+                        loading="lazy"
+                        alt="Partner logo"
+                      />
+                    </figure>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #NEWSLETTER
+      -->
+
+        <section class="section newsletter">
+          <div class="container">
+            <div class="newsletter-card">
+              <p class="section-subtitle">-- Theo dõi chúng tôi --</p>
+
+              <h2 class="h2 section-title">
+                Đăng kí nhận tin <span class="span">khuyến mãi 20% .</span>
+              </h2>
+
+              <form action="" class="newsletter-form">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Nhập Email "
+                  required
+                  class="input-email"
+                />
+
+                <button type="submit" class="btn btn-primary">
+                  <span>Đăng ký</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <a class="totop" href="#">
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </a>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="./index.html" class="logo"
+              >Orga<span class="span">nic</span></a
+            >
+
+            <p class="footer-text">
+              Organic chuyên cung cấp những sản phẩm được kiểm soát chặt chẽ từ
+              khâu con giống, chế biến thức ăn, chăm sóc sức khỏe vật nuôi đến
+              giết mổ, bao gói, bảo quản và vận chuyển một cách tốt nhất, sạch
+              nhất cho thị trường.
+            </p>
+
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <img
+                    src="./assets/images/btn/user-1.svg"
+                    width="30px"
+                    height="30px"
+                    alt=""
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <img
+                    src="./assets/images/btn/user-2.svg"
+                    width="30px"
+                    height="30px"
+                    alt=""
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <img
+                    src="./assets/images/btn/user-3.svg"
+                    width="30px"
+                    height="30px"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Liên kết</p>
+            </li>
+
+            <li>
+              <a href="./about.html" class="footer-link">Giới thiệu</a>
+            </li>
+
+            <li>
+              <a href="./shop.html" class="footer-link">Sản phẩm</a>
+            </li>
+
+            <li>
+              <a href="./blog.html" class="footer-link">Tin tức</a>
+            </li>
+
+            <li>
+              <a href="./contact.html" class="footer-link">Liên hệ</a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Liên hệ</p>
+            </li>
+
+            <li class="footer-item">
+              <div class="contact-icon">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <address class="contact-link">
+                Thụy Phương, Bắc TỪ Liêm, HN.
+              </address>
+            </li>
+
+            <li class="footer-item">
+              <div class="contact-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <a href="tel:+1800123456789" class="contact-link">034 444 9999</a>
+            </li>
+
+            <li class="footer-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <a href="mailto:organica@help.com" class="contact-link"
+                >organic.com</a
+              >
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Bản tin</p>
+
+            <p class="newsletter-text">
+              Bạn sẽ nhận được thông báo khi có tin mới.
+            </p>
+
+            <form action="" class="footer-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Địa chỉ Email *"
+                required
+                class="footer-input"
+              />
+
+              <button type="submit" class="footer-form-btn" aria-label="Submit">
+                <ion-icon name="mail-outline"></ion-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2023 <a href="#" class="copyright-link">organic</a>
+          </p>
+
+          <ul class="footer-bottom-list">
+            <li>
+              <a href="#" class="footer-bottom-link">Chính sách bảo mật</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/shop.js"></script>
+    <script src="./assets/js/add-to-card.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
