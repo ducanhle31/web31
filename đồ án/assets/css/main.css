@@ -186,6 +186,20 @@ body {
 margin-top: 10px;
 }
 
+.newsletter-form .btn {
+  background-color: var(--bg-color, var(--emerald));
+  color: var(--color, var(--white));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  font-size: var(--fs, var(--fs-7));
+  font-weight: var(--fw, var(--fw-500));
+  padding: var(--padding, 15px 20px);
+  border-radius: 50px;
+  transition: var(--transition-2);
+margin-top: 0px;
+}
 .btn ion-icon { font-size: 1.6rem; }
 
 .btn-primary:is(:hover, :focus) { --bg-color: var(--green-pigment); 
