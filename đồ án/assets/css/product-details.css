@@ -24,6 +24,7 @@
 }
 
 .product-details-img { margin-block-end: 10px; }
+
 .btn {
   background-color: var(--bg-color, var(--emerald));
   color: var(--color, var(--white));
@@ -39,7 +40,6 @@
 margin-top: 0px;
 }
 .product-display {
-  
   margin-block-end: 15px;
 }
 
@@ -59,8 +59,8 @@ margin-top: 0px;
 
 .product-thumbnail-item {
    border: 1px solid #c3f3dc;;
-  max-width: calc(50% - 5px);
-
+  min-width: calc(50% - 5px);
+  scroll-snap-align: start;
 }
 
 .product-title,
@@ -261,3 +261,7 @@ margin-top: 0px;
   .product-thumbnail-item { min-width: calc(25% - 7.5px); }
 
 }
+
+
+
+

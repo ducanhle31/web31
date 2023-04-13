@@ -1,7 +1,8 @@
 .blogdetails{
-    margin-top: 60px;
-  
-    
+    margin-top: 60px; 
+}
+.blogdetails .w-100{
+    width: 60%;
 }
 .headingbl{
     margin-bottom: 30px;

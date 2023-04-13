@@ -534,7 +534,7 @@ function renderUI(arr) {
                     p.price
                   )}</data>
                 </div>
-  <button class="btn btn-primary btn__add__to__cart">Thêm vào giỏ</button>
+  <button  class="btn btn-primary btn__add__to__cart">Thêm vào giỏ</button>
               </li>  
         `;
   }

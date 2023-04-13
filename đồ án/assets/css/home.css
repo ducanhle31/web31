@@ -632,7 +632,7 @@ transform: translateX(-50%);
    * SERVICE
    */
 
-  .service-list { grid-template-columns: 1fr 1fr; }
+  .service-list { grid-template-columns: 1fr 1fr;  }
 
 
 

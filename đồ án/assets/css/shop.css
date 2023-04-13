@@ -172,20 +172,11 @@ padding-right: 20px;
     float: left;
    width: 855px;
   }
-@media only screen and (max-width: 500px) {
+
+@media screen and (max-width: 768px) {
   .filters-left{
     display: block;position: unset;
-    width: 100%;
-  } 
-  .container-right{
-    display: block;
-   width:100%;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .filters-left{
-    display: block;position: unset;
-    width: 100%;top: 80px;
+    width: 100%;top: 80px;padding-right: 0px;
   }
 
  
@@ -195,4 +186,15 @@ padding-right: 20px;
   }
 }
 
-
+@media screen and (max-width: 480px) {
+  .filters-left{
+    display: block;position: unset;
+    width: 100%;
+    
+padding-right: 0px;
+  } 
+  .container-right{
+    display: block;
+   width:100%;
+  }
+}
