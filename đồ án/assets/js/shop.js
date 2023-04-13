@@ -455,6 +455,7 @@ let products = [
   },
 ];
 
+
 // === TRUY CẬP VÀO CÁC THÀNH PHẦN ===
 let productsEle = document.querySelector(".products");
 
@@ -648,7 +649,7 @@ function updatePagination(filteredArticles) {
 
   createAndAppendPaginationButtons(pagination, pageCount, pageType);
 }
-/*  */
+/* phân chia trang */
 
 // Create and append pagination buttons
 function createAndAppendPaginationButtons(pagination, pageCount, pageType) {

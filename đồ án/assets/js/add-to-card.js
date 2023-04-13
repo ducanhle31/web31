@@ -9,7 +9,7 @@ const totalCost = document.querySelector(".total__cost");
 const totalCount = document.querySelector("#total__counter");
 const checkOutBtn = document.querySelector(".check_out_btn");
 
-// assign all values from local stoarge
+// gán cá giá trị vào localstorage
 let cartItems = JSON.parse(localStorage.getItem("cart_items")) || [];
 
 document.addEventListener("DOMContentLoaded", loadData);
@@ -22,7 +22,7 @@ checkOutBtn.addEventListener("click", () => {
 cartCounter.addEventListener("click", () => {
   cartDOM.classList.toggle("active");
 });
-
+// duyệt qua các phần tử
 addToCartBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     let parentElement = btn.parentElement;
@@ -52,11 +52,11 @@ addToCartBtn.forEach((btn) => {
 
     cartDOMItems.forEach((individualItem) => {
       if (individualItem.querySelector(".product__id").value === product.id) {
-        // increrase
+        // increrase (tăng)
         increaseItem(individualItem, product);
-        // decrease
+        // decrease( giảm)
         decreaseItem(individualItem, product);
-        // Removing Element
+        // Removing Element (xóa)
         removeItem(individualItem, product);
       }
     });
@@ -181,7 +181,7 @@ function decreaseItem(individualItem, product) {
             calculateTotal();
             saveToLocalStorage();
           } else {
-            // removing this element and assign the new elemntos to the old of the array
+            // Loại bỏ phần tử này và gán các elements mới cho mảng cũ
             console.log(cartItems);
 
             cartItems = cartItems.filter(

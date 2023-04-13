@@ -62,5 +62,3 @@ for (let i = 0; i < panelBtns.length; i++) {
 
 
 
-
-

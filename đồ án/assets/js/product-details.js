@@ -17,7 +17,6 @@ for (let i = 0; i < productThumbnails.length; i++) {
 }
  
 
-/* slider */
 
 /* top product */
 
