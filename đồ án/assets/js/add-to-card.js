@@ -15,7 +15,8 @@ let cartItems = JSON.parse(localStorage.getItem("cart_items")) || [];
 document.addEventListener("DOMContentLoaded", loadData);
 
 checkOutBtn.addEventListener("click", () => {
-/* alert("Đơn hàng đã được thanh toán");  */
+  /* alert("Đơn hàng đã được thanh toán");  */
+
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function () {
@@ -23,7 +24,6 @@ checkOutBtn.addEventListener("click", () => {
   }, 3000);
 
   clearCartItems();
-  
 });
 
 cartCounter.addEventListener("click", () => {
@@ -50,12 +50,13 @@ addToCartBtn.forEach((btn) => {
     // check if alreday Exists
     if (!isIncart) {
       addItemToTheDOM(product);
-    } else {var x = document.getElementById("snackbarr");
-    x.className = "shows";
-    setTimeout(function () {
-      x.className = x.className.replace("shows", "");
-    }, 3000);
-     /*  alert("Sản phẩm đã có trong giỏ hàng"); */
+    } else {
+      var x = document.getElementById("snackbarr");
+      x.className = "shows";
+      setTimeout(function () {
+        x.className = x.className.replace("shows", "");
+      }, 3000);
+      /*  alert("Sản phẩm đã có trong giỏ hàng"); */
       return;
     }
 
@@ -224,8 +225,3 @@ function removeItem(individualItem, product) {
       });
     });
 }
-
-
-
-
-

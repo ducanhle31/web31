@@ -693,10 +693,7 @@ body {
   to {bottom: 0; opacity: 0;}
 }
 
-/* login */
-.center1 {
-  /*  font-family: var(--ff-roboto); */
-}
+
 
 .container1 {
   position: fixed;
@@ -1178,6 +1175,28 @@ background-size: cover;  background-blend-mode: darken;
  * responsive for larger than 480px screen
  */
 
+/* Man hinh tablet xoay ngang, Desktop*/
+/* @media screen and (max-width: 1279px) {
+ 
+} */
+
+
+/* Man hinh mobile xoay ngang, Tablet thang dung */
+@media screen and (max-width: 768px) {
+ #snackbarr{left: 60%;}
+#snackbar{left: 60%;}
+}
+
+/* Man hinh mobile */
+@media screen and (max-width: 480px) {
+#snackbarr{left: 50%;}
+#snackbar{left: 50%;}
+}
+
+
+
+
+
 @media (min-width: 480px) {
   /**
    * HEADER
@@ -1205,6 +1224,7 @@ background-size: cover;  background-blend-mode: darken;
   .input-wrapper {
     --translateX: -220px;
   }
+
 }
 
 /**
@@ -1286,6 +1306,7 @@ background-size: cover;  background-blend-mode: darken;
   .page-title {
     --fs-1: 5rem;
   }
+  
 }
 
 /**
