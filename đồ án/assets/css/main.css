@@ -1345,7 +1345,7 @@ background-size: cover;  background-blend-mode: darken;
   .navbar-link {
     color: var(--gunmetal-2);
     padding: 0 5px;
-    --fs-6: 1.6rem;
+    --fs-6: 1.8rem;
   }
 
   .navbar-link:is(:hover, :focus) {
