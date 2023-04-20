@@ -2,6 +2,10 @@
 /*  */
 
 
+/**
+ * Hàm chuyển đổi một số thành một chuỗi tiền tệ đồng Việt Nam được định dạng.
+ 
+ */
  function convertMoney(num) {
    return num.toLocaleString("it-IT", { style: "currency", currency: "VND" });
  }
@@ -539,7 +543,10 @@
 /* produce */
 // item filter
  
-
+/* 
+* Hàm lọc các phần tử trên trang web dựa trên clasname 
+ áp dụng cho các phần tử với lớp "filterDiv". Nếu giá trị của "class" là "tất cả", thì tất cả các phần tử
+ */
 filterSelection("raucu");
 function filterSelection(c) {
   var x, i;

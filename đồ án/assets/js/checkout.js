@@ -3,6 +3,7 @@ console.log(city);
 const districts = document.querySelector("#districts");
 console.log(document.body);
 const wards = document.querySelector("#wards");
+/* gọi api */
 
 async function getData() {
   const data = await fetch("https://provinces.open-api.vn/api/?depth=3")
@@ -13,6 +14,10 @@ async function getData() {
   return data;
 }
 
+/* Mã này đang tìm nạp dữ liệu từ API bằng cách sử dụng hàm 'getData()' và sau đó sử dụng trả về
+Dữ liệu để điền vào menu thả xuống 'Thành phố' với các tùy chọn. Phương thức 'map()' được sử dụng để lặp lại
+mảng dữ liệu và tạo một phần tử tùy chọn HTML cho mỗi thành phố, sau đó được gắn vào 'thành phố'
+menu thả xuống sử dụng thuộc tính 'innerHTML'. */
 getData().then((data) =>
   data.map((data) => {
     city.innerHTML += `<option value="${data.codename}">${data.name}</option>`;
@@ -113,56 +118,54 @@ const priceElem = document.querySelectorAll("#price");
 
 const totalElem = document.querySelector("#total");
 
-// loop: for add event on multiple `increment` & `decrement` button
+// Vòng lặp: Đối với Thêm sự kiện trên nhiều nút 'Tăng' &; 'Giảm'
+
 for (let i = 0; i < incrementBtn.length; i++) {
   incrementBtn[i].addEventListener("click", function () {
-    // collect the value of `quantity` textContent,
-    // based on clicked `increment` button sibling.
+    //thu thập giá trị của 'số lượng' textContent,
+    //dựa trên 'gia tăng' click
     let increment = Number(this.previousElementSibling.textContent);
 
-    // plus `increment` variable value by 1
+    // cộng với giá trị biến 'tăng' bằng 1
     increment++;
 
-    // show the `increment` variable value on `quantity` element
-    // based on clicked `increment` button sibling.
+    //Hiển thị giá trị biến 'Tăng' trên phần tử 'Số lượng'
+    //dựa trên 'gia tăng'  click
     this.previousElementSibling.textContent = increment;
 
     totalCalc();
   });
 
   decrementBtn[i].addEventListener("click", function () {
-    // collect the value of `quantity` textContent,
-    // based on clicked `decrement` button sibling.
+    //thu thập giá trị của 'số lượng' textContent,
+    //dựa trên 'gia tăng' click
     let decrement = Number(this.nextElementSibling.textContent);
 
-    // minus `decrement` variable value by 1 based on condition
+    /// trừ đi giá trị biến 'giảm' bằng 1 dựa trên điều kiện
     decrement <= 1 ? 1 : decrement--;
 
-    // show the `decrement` variable value on `quantity` element
-    // based on clicked `decrement` button sibling.
+    // Hiển thị giá trị biến 'Decrement' trên phần tử 'quantity'
+    // dựa trên 'nút giảm' 
     this.nextElementSibling.textContent = decrement;
 
     totalCalc();
   });
 }
 
-// function: for calculating total amount of product price
+// Chức năng: để tính tổng giá sản phẩm
 const totalCalc = function () {
-  // declare all initial variable
+  // khai báo tất cả biến ban đầu
 
- 
- 
   let total = 0;
 
-  // loop: for calculating `subtotal` value from every single product
+  // Vòng lặp: để tính giá trị 'tổng phụ' từ mỗi sản phẩm
   for (let i = 0; i < quantityElem.length; i++) {
-   total +=
-     Number(quantityElem[i].textContent) * Number(priceElem[i].textContent);
+    total +=
+      Number(quantityElem[i].textContent) * Number(priceElem[i].textContent);
   }
 
-  // show the `subtotal` variable value on `subtotalElem` element
-   totalElem.textContent = total.toFixed(3);
-  
+  // hiển thị giá trị biến 'subtotal' trên phần tử 'subtotalElem'
+  totalElem.textContent = total.toFixed(3);
 };
 
 

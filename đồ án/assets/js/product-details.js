@@ -4,7 +4,7 @@
 
 const productDisplay = document.querySelector("[data-product-display]");
 const productThumbnails = document.querySelectorAll("[data-product-thumbnail]");
-
+/* phóng to ảnh */
 for (let i = 0; i < productThumbnails.length; i++) {
   productThumbnails[i].addEventListener("click", function () {
     productDisplay.src = this.src;

@@ -566,21 +566,21 @@ if (resetCheckboxesButton) {
   resetCheckboxesButton.addEventListener("click", resetCheckboxes);
 }
 
-// Toggle checkbox event handler
+// Chuyển đổi trình xử lý sự kiện hộp kiểm
 function toggleCheckbox(e) {
   getChecked(e.target.name);
   currentPage = 1;
   updateVisibility();
 }
 
-// Get the checked checkboxes
+// Nhận các hộp kiểm được chọn
 function getChecked(name) {
   checked[name] = Array.from(
     document.querySelectorAll(`input[name=${name}]:checked`)
   ).map((el) => el.value);
 }
 
-// Filter and display the articles based on the checked checkboxes
+// Lọc và hiển thị dựa trên các hộp kiểm đã chọn
 function updateVisibility() {
   const filteredArticles = filterArticles();
   const pageArticles = getPageArticles(filteredArticles);
@@ -591,7 +591,7 @@ function updateVisibility() {
   updatePagination(filteredArticles);
 }
 
-// Filter the articles based on the checked checkboxes
+// Lọc các bài viết dựa trên các hộp kiểm đã chọn
 function filterArticles() {
   return allArticles.filter((el) => {
     const categoryFilter = checked.categoryFilter.length
@@ -601,38 +601,38 @@ function filterArticles() {
   });
 }
 
-// Get the articles to be displayed on the current page
+// Nhận các bài viết sẽ được hiển thị trên trang hiện tại
 function getPageArticles(filteredArticles) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   return filteredArticles.slice(startIndex, endIndex);
 }
 
-// Hide all articles
+// Ẩn tất cả các bài viết
 function hideAllArticles() {
   allArticles.forEach((el) => {
     el.style.display = "none";
   });
 }
 
-// Show the articles of the current page
+// Hiển thị các bài viết của trang hiện tại
 function showPageArticles(pageArticles) {
   pageArticles.forEach((el) => {
     el.style.display = "block";
   });
 }
 
-// Reset the checked checkboxes and update the visibility
+// Đặt lại các hộp kiểm đã chọn và cập nhật khả năng hiển thị
 function resetCheckboxes() {
   allCheckboxes.forEach((el) => {
     el.checked = false;
   });
-  checked = { categoryFilter: [] }; // Initialize categoryFilter as an empty array
+  checked = { categoryFilter: [] }; // Khởi tạo categoryFilter dưới dạng mảng trống
   currentPage = 1;
   updateVisibility();
 }
 
-// Update the pagination based on the filtered articles
+// Cập nhật phân trang dựa trên các bài viết đã lọc
 function updatePagination(filteredArticles) {
   const pageCount = Math.ceil(filteredArticles.length / itemsPerPage);
   const pageType = Math.ceil(filteredArticles.length / itemsPerPage);
@@ -651,7 +651,7 @@ function updatePagination(filteredArticles) {
 }
 /* phân chia trang */
 
-// Create and append pagination buttons
+// Tạo và thêm các nút phân trang
 function createAndAppendPaginationButtons(pagination, pageCount, pageType) {
   const previousButton = createPreviousButton();
   const nextButton = createNextButton();
@@ -700,7 +700,7 @@ function createAndAppendPaginationButtons(pagination, pageCount, pageType) {
   pagination.appendChild(nextButton);
 }
 
-// Create the previous button
+// Tạo nút trước đó
 function createPreviousButton() {
   const previousButton = document.createElement("button");
   previousButton.innerHTML = "<<";
@@ -710,7 +710,7 @@ function createPreviousButton() {
   });
   return previousButton;
 }
-// Create the next button
+// Tạo nút tiếp theo
 function createNextButton() {
   const nextButton = document.createElement("button");
   nextButton.innerText = ">>";
@@ -721,7 +721,7 @@ function createNextButton() {
   return nextButton;
 }
 
-// Create a page button
+// Nút Tạo trang
 function createPageButton(i) {
   const button = document.createElement("button");
   button.innerText = i;

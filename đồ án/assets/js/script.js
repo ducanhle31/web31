@@ -5,7 +5,7 @@
 
 
 /**
- * navbar toggle
+ * navbar Ẩn hiện
  */
 
 const navOpenBtn = document.querySelector("[data-nav-open-btn]");
@@ -36,7 +36,7 @@ searchBtn.addEventListener("click", function () {
 
 
 /**
- * whishlist & cart toggle
+ * cart toggle
  */
 
 const panelBtns = document.querySelectorAll("[data-panel-btn]");

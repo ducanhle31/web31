@@ -50,7 +50,7 @@ addToCartBtn.forEach((btn) => {
     let isIncart =
       cartItems.filter((item) => item.id === product.id).length > 0;
 
-    // check if alreday Exists
+    // kiểm tra xem đã tồn tại chưa
     if (!isIncart) {
       addItemToTheDOM(product);
     } else {
@@ -65,6 +65,10 @@ addToCartBtn.forEach((btn) => {
 
     const cartDOMItems = document.querySelectorAll(".cart_item");
 
+    /* lặp qua từng mặt hàng trong giỏ hàng và kiểm tra xem ID sản phẩm có
+    khớp với ID của sản phẩm được thêm vào giỏ hàng.lần lượt xử lý
+    tăng số lượng mặt hàng, giảm số lượng mặt hàng và loại bỏ mặt hàng
+    từ giỏ hàng. */
     cartDOMItems.forEach((individualItem) => {
       if (individualItem.querySelector(".product__id").value === product.id) {
         // increrase (tăng)
@@ -81,6 +85,10 @@ addToCartBtn.forEach((btn) => {
     saveToLocalStorage();
   });
 });
+/**
+ * Hàm tải dữ liệu từ mảng cartItems và cập nhật DOM cho phù hợp, bao gồm
+ * Tăng, giảm và loại bỏ các mục và tính toán tổng.
+ */
 
 function loadData() {
   if (cartItems.length > 0) {
@@ -104,6 +112,9 @@ function loadData() {
   }
 }
 
+/**
+ * Hàm tính toán tổng chi phí của các mặt hàng trong giỏ hàng và hiển thị giá vnd
+ */
 function calculateTotal() {
   let total = 0;
   cartItems.forEach((item) => {
@@ -116,9 +127,14 @@ function calculateTotal() {
   totalCount.innerText = cartItems.length;
 }
 
+
 function saveToLocalStorage() {
   localStorage.setItem("cart_items", JSON.stringify(cartItems));
 }
+/**
+ * Chức năng xóa các mục giỏ hàng khỏi bộ nhớ cục bộ và DOM.
+ */
+
 function clearCartItems() {
   localStorage.clear();
   cartItems = [];
@@ -132,8 +148,9 @@ function clearCartItems() {
   calculateTotal();
 }
 
+
 function addItemToTheDOM(product) {
-  // Adding the new Item to the Dom
+  // Thêm Mục mới vào Dom
   cartDOM.insertAdjacentHTML(
     "afterbegin",
     `<li class="panel-item"></li>
@@ -166,11 +183,12 @@ function addItemToTheDOM(product) {
   );
 }
 
+
 function increaseItem(individualItem, product) {
   individualItem
     .querySelector("[action='increase']")
     .addEventListener("click", () => {
-      // Actual Array
+      // Mảng thực tế
       cartItems.forEach((cartItem) => {
         if (cartItem.id === product.id) {
           individualItem.querySelector(".product__quantity").innerText =
@@ -211,6 +229,7 @@ function decreaseItem(individualItem, product) {
       });
     });
 }
+
 
 function removeItem(individualItem, product) {
   individualItem
