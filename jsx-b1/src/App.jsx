@@ -2,11 +2,57 @@ import Heading from "./Heading";
 import Image from "./Image";
 import "./style.css";
 
+/* const menu = [
+  {
+    label: "Phim cổ trang",
+    href: "/the-loai/co-trang",
+    type: "link",
+  },
+  {
+    label: "Phim lẻ",
+    href: "",
+    type: "dropdown",
+    children: [
+      {
+        label: "Phim Ấn độ",
+        href: "/the-loai/chieu-rap/an-do",
+      },
+      {
+        label: "Phim Mỹ",
+        href: "https://www.youtube.com/?app",
+      },
+      {
+        label: "Phim 18",
+        href: "/the-loai/chieu-rap/18",
+      },
+    ],
+  },
+]; */
+
 export default function App() {
   return (
     <div>
       <Heading />
       <Image />
+
+      {/* {menu.map((item) => {
+        if (item.type === "link") {
+          return <a href={item.href}>{item.label}</a>;
+        } else {
+          return (
+            <div>
+              {item.label}
+              <ul>
+                {item.children.map((item) => (
+                  <li>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+      })} */}
     </div>
   );
 }

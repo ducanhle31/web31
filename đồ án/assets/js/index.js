@@ -139,7 +139,7 @@
 
      image: "./assets/images/products/hoaqua/tao.webp",
    },
-   {
+   /* {
      price: 35000,
      star: 4.5,
      del: 40000,
@@ -148,7 +148,7 @@
      id: 13,
      title: "Gừng",
      image: "./assets/images/products/raucu/ginger_PNG16800.png",
-   },
+   }, */
    {
      star: 4.5,
      count: "hoaqua",
