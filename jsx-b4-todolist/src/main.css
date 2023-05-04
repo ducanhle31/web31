@@ -1,0 +1,79 @@
+.galleryWrapper {
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  font-family: system-ui;
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterItem button:hover {
+  background-color: #c87f00;
+}
+
+.filterItem button {
+  background-color: #f59e0b;
+  border: 1px solid #f59e0b;
+  border-radius: 2px;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+}
+.imgitem img {
+  width: 369px;
+  height: 240px;
+}
+.titleitem {
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  color: red;
+}
+.dec {
+  margin-top: 15px;
+  text-align: start;
+  font-size: 18px;
+  color: #647488;
+}
+.galleryItem {
+  margin: 20px;
+}
+.column {
+  display: grid;
+
+  padding: 0 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.galleryItem {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
