@@ -4,7 +4,7 @@ import "./Layout.css"
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import Top from "./Totop";
-
+import { ScrollRestoration } from "react-router-dom";
 export default function Layout() {
   return (
     <div className="layout">
@@ -16,6 +16,7 @@ export default function Layout() {
 
       <Footer />
       <Top />
+      <ScrollRestoration />
     </div>
   );
 }

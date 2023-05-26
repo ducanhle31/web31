@@ -1,5 +1,5 @@
 {
-  "name": "react-organic",
+  "name": "redux-toolkit1",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,17 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.7",
-    "@reacticons/ionicons": "^7.1.0",
     "@reduxjs/toolkit": "^1.9.5",
-    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-    "react-ionicons": "^1.4.6",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.11.1",
-    "swiper": "^9.3.1"
+    "redux": "^4.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

@@ -15,7 +15,63 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 import { useEffect, useState } from "react";
+
+import products from "../assets/fake-data/products.jsx";
+import ProductCard from "../components/UI/product-card/ProductCard.jsx";
+
 export default function Index() {
+
+const [category, setCategory] = useState("ALL");
+const [allProducts, setAllProducts] = useState(products);
+
+const [hotHat, setHotHat] = useState([]);
+
+useEffect(() => {
+  const filteredPizza = products.filter((item) => item.category === "Hat");
+  const slicePizza = filteredPizza.slice(0, 4);
+  setHotHat(slicePizza);
+}, []);
+
+useEffect(() => {
+  if (category === "ALL") {
+    setAllProducts(products);
+  }
+
+  if (category === "RAUCU") {
+    const filteredProducts = products.filter(
+      (item) => item.category === "Raucu"
+    );
+
+    setAllProducts(filteredProducts);
+  }
+
+  if (category === "HOAQUA") {
+    const filteredProducts = products.filter(
+      (item) => item.category === "Hoaqua"
+    );
+
+    setAllProducts(filteredProducts);
+  }
+
+  if (category === "HAT") {
+    const filteredProducts = products.filter((item) => item.category === "Hat");
+
+    setAllProducts(filteredProducts);
+  }
+  if (category === "THIT") {
+    const filteredProducts = products.filter(
+      (item) => item.category === "Thit"
+    );
+
+    setAllProducts(filteredProducts);
+  }
+}, [category]);
+
+
+
+
+
+
     const Products = [
       {
         price: 25000,
@@ -732,6 +788,11 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+
+
+
+        
         {/* 
   - #CTA
 */}

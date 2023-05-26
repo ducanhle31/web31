@@ -407,7 +407,7 @@ body {
   color: var(--emerald);
 }
 
-.product-card .price-wrapper {
+.product-card.price-wrapper {
   font-size: var(--fs-6);
   margin-block-end: 15px;
 }
